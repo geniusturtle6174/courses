@@ -1,0 +1,62 @@
+﻿<html>
+<head>
+	<title>MATH171002--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">HW01 - Zeller's Formula</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>Deadline: 09/26 (二) 08:00</li>
+	<li>繳交方式: eeclass 作業上傳區，檔名必須為「hw01_你的學號.py」，例如 hw01_9962816.py</li>
+	<li>Demo 時間地點: 09/27 原上課時段於原教室</li>
+	<li>Early Bonus: 09/24 (日) 08:00 前 5 分，09/25 (一) 08:00 前 3 分</li>
+	<li>評分方式: (正確性+Early)*Demo/100</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+透過<a href="https://zh.wikipedia.org/wiki/%E8%94%A1%E5%8B%92%E5%85%AC%E5%BC%8F">蔡勒公式</a>，
+可以計算出幾年幾月幾日是星期幾，本題目要請你實作出這個公式
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+請撰寫一個 function，名稱須為 zeller，輸入包含三個整數 y m d，依序代表年、月、日。
+其中 y &ge; 1583，且 y m d 的組合可代表合法日期。
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+回傳一個整數，0~6 依次代表週日、週一、週二、...、週六。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+<pre>2023 9 20</pre>
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+<pre>3</pre>
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>題目敘述中的 y, m, d 與 wiki 所列公式的符號定義不完全相同。此外，y, m, d 並不代表對變數名稱有要求；在易於閱讀程式碼的狀況下，你完全可以使用自己喜歡的合法名稱</li>
+	<li>請留意取餘數時，出現負數的狀況。</li>
+	<li>請遵守檔名及 function 名稱之要求，且繳交之程式碼中，除了以下範例的 function 名稱、參數內容以及標示「pass」的位置之外，不得做任何修改，否則會視情況予以折扣。
+<pre class="brush: py">
+import math
+
+def test():
+	pass
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+</ul>
+
+</body></html>
