@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+	<title>MATH171002--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">隨堂練習 04</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+<ul>
+	<li>請解答此 LeetCode 問題（30%）：<a href="https://leetcode.com/problems/add-two-integers/">2235. Add Two Integers</a></li>
+	<li>請解答此 LeetCode 問題（35%）：<a href="https://leetcode.com/problems/majority-element/">169. Majority Element</a></li>
+	<li>請解答此 LeetCode 問題（35%）：<a href="https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/">1523. Count Odd Numbers in an Interval Range</a></li>
+	<li>加分題：請在不使用「if-else」的情況下，解答上一題（10%）</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>如果沒有 LeetCode 帳號的話，請先註冊一個自己的帳號。</li>
+	<li>作答時，語言請選擇「Python」，而非「Python3」或其他任何選項。</li>
+	<li>本次練習的所有題目，都有不使用迴圈的解法。此外，在 demo 時，需要展示 LeetCode 平台的 AC 畫面。</li>
+	<li>如果你有興趣，可以自行嘗試用其他語言解答 LeetCode 相關題目，但在本次練習（以及之後的所有作業和練習）中，仍須使用指定之語言選項，以及符合其他相關規定。</li>
+	<li>LeetCode 的架構規則，會有一個 Solution 物件，其中包含一個指定名稱的函式。以一個「把輸入數字加一」的範例題目來說，完整的解答及測試方式將如下：
+<pre class="brush: py">
+class Solution(object): # 這一行題目會給，不要動
+	def addOne(self, num): # 這一行題目也會給，也不要動
+		return num + 1
+
+if __name__ == '__main__':
+	S = Solution()
+	print(S.addOne(123))
+</pre>
+	撰寫及測試時的原則如下：
+	<ul>
+		<li>只需要專注在該函式內容的撰寫，不需要更動參數列表及其他任何地方</li>
+		<li>若要測試時，建議在「if __name__ == '__main__':」區塊當中進行</li>
+		<li>函式撰寫完成後的測試方式為，先使用「S = Solution()」，並在呼叫一般函式的方法前面加上「S.」來使用</li>
+		<li>送出至 LeetCode 時，可以只複製 class 區塊並貼上，也可以連「if __name__ == '__main__':」一起複製並貼上</li>
+	</ul>
+	</li>
+</ul>
+
+</body></html>
