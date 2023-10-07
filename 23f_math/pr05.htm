@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+	<title>MATH171002--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">隨堂練習 05</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+<ul>
+	<li>請解答此 LeetCode 問題（30%）：<a href="https://leetcode.com/problems/find-the-pivot-integer/">2485. Find the Pivot Integer</a></li>
+	<li>請解答此 LeetCode 問題（35%）：<a href="https://leetcode.com/problems/height-checker/">1051. Height Checker</a></li>
+	<li>請解答此 LeetCode 問題（35%）：<a href="https://leetcode.com/problems/sort-the-people/">2418. Sort the People</a></li>
+	<li>加分題：請只使用一行程式，解答前兩題的任一題（10%）</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>如果你忘記了 LeetCode 的作答及測試方式，請參考上週的隨堂練習。</li>
+	<li>是否為「一行程式」的範例如下，其中前者(c1)的產生為非，後者(c2)的產生為是：
+<pre class="brush: py">
+a = ['A', 'B', 'C']
+b = ['X', 'Y', 'Z']
+
+c1 = []
+for i in a:
+	for j in b:
+		c1.append(i + j)
+
+c2 = [i + j for i in a for j in b]
+</pre>
+	</li>
+	<li>第三題的提示如下，請觀察兩個輸出的結果差異：
+<pre class="brush: py">
+a = ['A', 'R', 'Y', 'X', 'C', 'R']
+b = [ 5,   1,   2,   3,   2,   4]
+
+print(sorted(zip(a, b)))
+print(sorted(zip(b, a)))
+</pre>
+	</li>
+</ul>
+
+</body></html>
