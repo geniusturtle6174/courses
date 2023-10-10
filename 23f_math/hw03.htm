@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+	<title>MATH171002--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">HW03 - Black Hole Number (4 digits)</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>Deadline: 10/24 (二) 08:00</li>
+	<li>繳交方式: eeclass 作業上傳區，檔名必須為「hw03_你的學號.py」，例如 hw03_9962816.py</li>
+	<li>Demo 時間地點: 10/25 原上課時段於原教室</li>
+	<li>Early Bonus: 10/22 (日) 08:00 前 3 分</li>
+	<li>評分方式: (正確性+Early)*Demo/100</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+給定一個四個位數不完全相同的四位數，並反覆執行「將位數由大排到小的結果減去由小排到大的結果」，則最後一定會來到 6174。請撰寫一個函式，名為 black_hole_number，來計算此問題。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+一個小於 10000，且四個位數不完全相同的正整數
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+回傳一個串列，內容都是整數，代表到掉入黑洞為止的過程。此串列的第一個數必須是輸入給函式的數字，且串列中的每個數字最多只出現一次。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+1234
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+[1234, 3087, 8352, 6174]
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>除了 6174 或 10 的整數次方的數字以外，你的程式碼中不能出現任何數字（測試函式時除外）。自我挑戰：試著連 6174 也不能使用。</li>
+	<li>測資只有一組，會把所有合法數字都試過，全對才能得分。</li>
+	<li>請遵守檔名等相關要求，且繳交之程式碼中，除了以下範例中函式的內容，以及「if __name__ == '__main__':」區塊當中的內容之外，不得做任何修改，否則會視情況予以折扣。惟若有需要，可以撰寫新的函式。
+<pre class="brush: py">
+def black_hole_number(num):
+	pass
+
+if __name__ == '__main__':
+    print(black_hole_number(1234))
+</pre>
+	</li>
+</ul>
+
+</body></html>
