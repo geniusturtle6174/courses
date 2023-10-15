@@ -1,0 +1,104 @@
+﻿<html>
+<head>
+	<title>MATH171002--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	<style>
+		input{color:eee;background-color:#55f;border:0px;width:170px;height:40px;
+			  border-radius:5px;font-size:15px;
+			  -webkit-transition: background-color 0.4s linear;
+			  -moz-transition: background-color 0.4s linear;
+			  transition: background-color 0.4s linear;}
+		input:hover{background-color:#f55;}
+	</style>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">HW04 - Never Gonna Give up</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>Deadline: 10/31 (二) 08:00</li>
+	<li>繳交方式: eeclass 作業上傳區，檔名必須為「hw04_你的學號.py」，例如 hw04_9962816.py</li>
+	<li>Demo 時間地點: 11/01 原上課時段於原教室</li>
+	<li>Early Bonus: 10/29 (日) 08:00 前 5 分，10/30 (一) 08:00 前 3 分</li>
+	<li>評分方式: (正確性+Early)*Demo/100</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+
+<script>
+var idx = 1;
+var num = 4;
+function goNext(diff){
+	idx += diff;
+	if(idx<=0){idx=num;}
+	if(idx>num){idx=1;}
+	str = idx.toString();
+	document.getElementById("qPic").src = "pics/hw04_" + str + ".jpg";
+}
+</script>
+
+<center>
+<table width="100%" border="0px"><tr>
+<td width="35%" align="right"><input type="button" value="點我看更多圖（上一張）" onclick="goNext(-1);"></td>
+<td width="30%"><center><img id="qPic" src="pics/hw04_1.jpg" height="350"></center></td>
+<td width="35%"><input type="button" value="點我看更多圖（下一張）" onclick="goNext(1);"></td>
+</tr></table>
+</center>
+<br/>
+本題目會給你一個字串 in_str，及元素週期表的全部或部分內容 p_table，要請你撰寫一個函式 is_spellable_by_ptable，判斷該字串是否可由給定的全部或部分的元素週期表當中，抽出一些元素來組成，例如上圖為 never gonna give up 以及其組成方式。當然由於在組成 never gonna give up 時多加了一個「r」和「u」，因此這並不是一個簡單的範例，<b>本題目只需要在不必加減字的狀況下做判斷</b>。本題目亦會給你一些多餘的圖片，以適度放鬆作業心情，唯部分圖片帶有髒字，或者需要成年後才適合觀看，故請你確定自己能接受以及已成年之後再看。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+一個不為空的字串 in_str，代表要被判斷的字串；以及一個不為空的串列 p_table，其中的每個元素是一個字串，代表可以被用來組成 in_str 的元素。為了方便，in_str 這個字串和 p_table 裡面的每個字串，都只會使用小寫英文字母。
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+若 in_str 可以由 p_table 的內容組合則回傳 True，反之則回傳 False。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input/Output</p>
+<ul>
+	<li>輸入：'practice', ['ar', 'rg', 'ce', 'al', 'sc', 'tl', 'o', 'pa', 'te', 'c', 'ti', 'pr', 'ra', 'ti', 'p', 'ac', 'at']，輸出：True</li>
+	<li>輸入：'math', ['mg', 'ti', 'mn', 'mt', 'as']，輸出：False</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>請遵守檔名及函式名稱等相關要求，否則會視情況予以折扣。若需測試時，建議寫在「if __name__ == '__main__':」區塊當中。</li>
+	<li>測資有三組，第一組保證最多只有一種拆法，第二組保證 in_str 長度在 2 以內。三組全對時加一分，使總分為 100。</li>
+	<li>若要使用整張元素週期表做測試，可以參考以下範例：
+<pre class="brush: py">
+def is_spellable_by_ptable(in_str, p_table):
+	pass
+
+
+if __name__ == '__main__':
+	p_table = [
+		'H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne',
+		'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca',
+		'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn',
+		'Ga', 'Ge', 'As', 'Se', 'Br', 'Kr', 'Rb', 'Sr', 'Y', 'Zr',
+		'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd', 'In', 'Sn',
+		'Sb', 'Te', 'I', 'Xe', 'Cs', 'Ba', 'La', 'Ce', 'Pr', 'Nd',
+		'Pm', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', 'Ho', 'Er', 'Tm', 'Yb',
+		'Lu', 'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg',
+		'Tl', 'Pb', 'Bi', 'Po', 'At', 'Rn', 'Fr', 'Ra', 'Ac', 'Th',
+		'Pa', 'U', 'Np', 'Pu', 'Am', 'Cm', 'Bk', 'Cf', 'Es', 'Fm',
+		'Md', 'No', 'Lr', 'Rf', 'Db', 'Sg', 'Bh', 'Hs', 'Mt', 'Ds',
+		'Rg', 'Cn', 'Nh', 'Fl', 'Mc', 'Lv', 'Ts', 'Og',
+	]
+	p_table = [e.lower() for e in p_table]
+	print(is_spellable_by_ptable('practice', p_table))
+	print(is_spellable_by_ptable('math', p_table))
+</pre>
+	</li>
+</ul>
+
+</body></html>
