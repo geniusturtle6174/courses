@@ -66,13 +66,15 @@ function goNext(diff){
 <p style="background-color:#f99;font-size:17pt">Sample Input/Output</p>
 <ul>
 	<li>輸入：'practice', ['ar', 'rg', 'ce', 'al', 'sc', 'tl', 'o', 'pa', 'te', 'c', 'ti', 'pr', 'ra', 'ti', 'p', 'ac', 'at']，輸出：True</li>
+	<li>輸入：'yes', ['yb', 'se', 'y', 's', 'es']，輸出：True</li>
 	<li>輸入：'math', ['mg', 'ti', 'mn', 'mt', 'as']，輸出：False</li>
+	<li>輸入：'after', ['f', 'te', 'ar', 't', 'r']，輸出：False</li>
 </ul>
 
 <p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
 <ul>
 	<li>請遵守檔名及函式名稱等相關要求，否則會視情況予以折扣。若需測試時，建議寫在「if __name__ == '__main__':」區塊當中。</li>
-	<li>測資有三組，第一組保證最多只有一種拆法，第二組保證 in_str 長度在 2 以內。三組全對時加一分，使總分為 100。</li>
+	<li>測資有三組，第一組保證最多只有一種組合方法，第二組保證 in_str 長度在 2 以內。三組全對時加一分，使總分為 100。</li>
 	<li>若要使用整張元素週期表做測試，可以參考以下範例：
 <pre class="brush: py">
 def is_spellable_by_ptable(in_str, p_table):
