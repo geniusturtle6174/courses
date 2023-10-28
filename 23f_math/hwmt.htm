@@ -1,0 +1,87 @@
+﻿<html>
+<head>
+	<title>MATH171002--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		input = prompt('Enter passwrd:')
+		if(input!='3135134126'){
+			document.removeChild(document.documentElement);
+		}
+		SyntaxHighlighter.all();
+	</script>
+	<style>
+		input{color:eee;background-color:#55f;border:0px;width:170px;height:40px;
+			  border-radius:5px;font-size:15px;
+			  -webkit-transition: background-color 0.4s linear;
+			  -moz-transition: background-color 0.4s linear;
+			  transition: background-color 0.4s linear;}
+		input:hover{background-color:#f55;}
+	</style>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">期中作業</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>Deadline: 11/21 (二) 08:00</li>
+	<li>繳交方式: eeclass 作業上傳區，檔名必須為「hwmt_你的學號.py」，例如 hwmt_9962816.py</li>
+	<li>Demo 時間地點: 11/22 原上課時段於原教室</li>
+	<li>Pylint Bonus: 10 分</li>
+	<li>評分方式: (各題分數和+Pylint)/5*Demo/100</li>
+	<!--
+		隨堂一次 10 分 = 總成績 10 / 14 * 0.34 = 0.243 分
+		作業一次 5 分 = 總成績 5 / 4 * 0.19 = 0.238 分
+		期中 pylint 5 分不除 = 總成績 5 * 0.24 = 1.2 分
+		期中 pylint 10 分要除 = 總成績 10 / 5 * 0.24 = 0.48 分
+	-->
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+
+<ul>
+	<li><a href="hwmt01.htm">Q1: Get Shimps by Differents of Heights</a> (50 points)。</li>
+	<li><a href="hwmt02.htm">Q2: Never Gonna Give up (Ver. spell-out)</a> (100 points)。</li>
+	<li><a href="hwmt03.htm">Q3: Black Hole Number (6 digits)</a> (100 points)。</li>
+	<li>Q4: 請解答此 LeetCode 問題：<a href="https://leetcode.com/problems/greatest-common-divisor-of-strings/">1071. Greatest Common Divisor of Strings</a> (100 points)。本課程評分用測資共分兩組，其中一組保證答案不為空字串。</li>
+	<li>Q5: 請解答此 LeetCode 問題：<a href="https://leetcode.com/problems/min-cost-climbing-stairs/">746. Min Cost Climbing Stairs</a> (150 points)。本課程評分用測資共分兩組，其中一組最多兩種數字。</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>Pylint Bonus 給分方式為 max(pylint-score, 0)，評分指令為「pylint --disable=C0103,C0301,C0111,R0201 your_file.py」。評分結果以教師安裝的版本(2.2.2)為準。</li>
+	<li>請照以下格式繳送你的答案，除了標示為 pass 的地方以外不得做任何修改；若有需要撰寫額外的函式時，第一到三題應寫在該題前方（與上一題之間，若有），後兩題應寫在「class Solution(object):」與第三題之間，否則會視情況予以折扣：
+<pre class="brush: py">
+def get_shimp_num(heights):
+	pass
+
+
+def spell_word_by_ptable(in_str, p_table):
+	pass
+
+
+def black_hole_number(num):
+	pass
+
+
+class Solution(object):
+	def gcdOfStrings(self, str1, str2):
+		pass
+
+	def minCostClimbingStairs(self, cost):
+		pass
+
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+</ul>
+
+</body></html>

@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+	<title>MATH171002--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		input = prompt('Enter passwrd:')
+		if(input!='3135134126'){
+			document.removeChild(document.documentElement);
+		}
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">HWMT03 - Black Hole Number (6 digits)</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+給定一個六個位數不完全相同的六位數，並反覆執行「將位數由大排到小的結果減去由小排到大的結果」（以下簡稱為「演算」），則最後一定會來到 631764，或者 549945，或者一個七個數字的循環 420876 → 851742 → 750843 → 840852 → 860832 → 862632 → 642654 → 420876。請撰寫一個函式，名為 black_hole_number，來計算此問題。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+一個小於 1000000，且六個位數不完全相同的正整數
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+回傳一個串列，內容都是整數，代表到掉入黑洞為止的過程。此串列的第一個數必須是輸入給函式的數字，且串列的最後一個數字經過演算後，會跟已在串列中的某個數字相等。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+12345
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+[12345, 530865, 829962, 771723, 653544, 310887, 873522, 651744, 620874, 851742, 750843, 840852, 860832, 862632, 642654, 420876]
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>測資只有一組。</li>
+	<li>輸入小於 10000 時，請當作有前導零來處理，例如 123 應視為 000123，45 應視為 000045，6 應視為 000006。</li>
+	<li>你的程式中，除了黑洞數本身以外，不應有把答案寫死，或任何教師認定為等效或具相近效果之行為。</li>
+</ul>
+
+</body></html>
