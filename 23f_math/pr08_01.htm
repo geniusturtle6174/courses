@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+	<title>MATH171002--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">隨堂練習 08-1 Are Math Students Strange?</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+<center><img src="pics/math.png"></center><br><br>
+<p>馬可夫矩陣或是馬可夫鏈可以代表一連串狀態轉移的機率，舉例來說，若數學系學生今年正常變成明年怪怪的機率是 0.7，維持正常的機率是 0.3；從怪怪的變成正常的機率是 0.1，維持怪怪的機率是 0.9；則當給定一個今年怪怪的數學系學生的時候：</p>
+<ul>
+	<li>一年後：怪怪的機率是 0.9，正常的機率是 0.1</li>
+	<li>兩年後：怪怪的機率是 0.9 * 0.9 + 0.1 * 0.7，正常的機率依此類推</li>
+</ul>
+
+<p>這個問題就可以用馬可夫矩陣描述。我們可以讓 v 向量（row vector，下同）的第一個元素代表數學系學生今年正常的機率，第二個元素代表今年怪怪的機率，而轉移矩陣 P 的 P<sub>0,0</sub> 代表今年正常、明年也正常的機率；P<sub>0,1</sub> 則代表今年正常、明年怪怪的機率。反之 P<sub>1,0</sub> 與 P<sub>1,1</sub> 代表已知今年怪怪的，明年正常與怪怪的機率。</p>
+
+<p>因此，隔年正常或怪怪的機率就可以用 v * P 來計算、兩年後正常或怪怪的機率就可以用 v * P<sup>2</sup> 來計算，k 年後則可以用 v * P<sup>k</sup> 來計算。若狀態不只正常或怪怪兩種，一樣可以將每一種狀態的轉移機率建立成 n-by-n 的轉移矩陣，並且將初始狀態乘以之，就可以得到新的狀態。</p>
+
+<p>本題要請你撰寫一個函式（名稱自訂）輸入參數依序是上述的向量 v、矩陣 P，以及一個正整數 k，請回傳 v * P<sup>k</sup> 的結果。</p>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>無。</li>
+</ul>
+
+</body></html>
