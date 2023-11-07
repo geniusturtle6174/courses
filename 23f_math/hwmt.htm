@@ -15,14 +15,6 @@
 		}
 		SyntaxHighlighter.all();
 	</script>
-	<style>
-		input{color:eee;background-color:#55f;border:0px;width:170px;height:40px;
-			  border-radius:5px;font-size:15px;
-			  -webkit-transition: background-color 0.4s linear;
-			  -moz-transition: background-color 0.4s linear;
-			  transition: background-color 0.4s linear;}
-		input:hover{background-color:#f55;}
-	</style>
 </head>
 <body bgcolor="#ccccff">
 
@@ -34,7 +26,7 @@
 	<li>繳交方式: eeclass 作業上傳區，檔名詳如各題說明</li>
 	<li>Demo 時間地點: 11/22 原上課時段於原教室</li>
 	<li>Pylint Bonus: 4 分</li>
-	<li>評分方式: (各題分數和/5+Pylint)*Demo/100</li>
+	<li>評分方式: (&Sigma;<sub>i</sub>(第 i 題正確性 * 第 i 題 demo / 100))  / 5 + Pylint</li>
 	<!--
 		隨堂一次 10 分 = 總成績 10 / 14 * 0.34 = 0.243 分
 		作業一次 5 分 = 總成績 5 / 4 * 0.19 = 0.238 分
@@ -68,8 +60,8 @@
 <ul>
 	<li>Pylint Bonus
 		<ul>
-			<li>每題評分指令為「pylint --disable=C0103,C0301,C0111,R0201,R1705,C1801,R0903 your_file.py」。評分結果以教師安裝的版本(2.2.2)為準。</li>
-			<li>每題給分方式為 max(pylint-score, 0) * 0.4，取最小值為整體分數。</li>
+			<li>每題評分指令皆為「pylint --disable=C0103,C0301,C0111,R0201,R1705,C1801,R0903 your_file.py」。評分結果以教師安裝的版本(2.2.2)為準。</li>
+			<li>每題給分方式為 max(pylint-score, 0) * 0.4，取各題之最小值為整體分數。</li>
 		</ul>
 	</li>
 </ul>
