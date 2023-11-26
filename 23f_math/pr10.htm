@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+	<title>MATH171002--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">隨堂練習 10</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+<ul>
+	<li>爬蟲題：給定噗浪上某一則噗的網址，例如 <a href="https://www.plurk.com/p/pgnh5y">https://www.plurk.com/p/pgnh5y</a>，請爬取它被發表的時間</li>
+	<li>畫圖題（二選一）
+		<ul>
+			<li>Sierpinski triangle，繪製步驟如下
+				<ol>
+					<li>繪製一正三角形</li>
+					<li>自選三角形內之一點並繪出</li>
+					<li>隨機選取一個頂點</li>
+					<li>將前兩步的兩的點取中點</li>
+					<li>以第四步算出的中點，帶入第二步</li>
+					<li>重複步驟二到五，建議至少一千次</li>
+				</ol>
+			</li>
+			<li>Barnsley fern，繪製步驟如下
+				<ol>
+					<li>以原點為起始點並繪出</li>
+					<li>以不同機率選取下列指定方式，移動到下一個點並繪出
+						<ul>
+							<li>1%: x<sub>i+1</sub> = 0, y<sub>i+1</sub> = y<sub>i</sub> * 0.16</li>
+							<li>85%: x<sub>i+1</sub> = x<sub>i</sub> * 0.85 + y<sub>i</sub> * 0.04, y<sub>i+1</sub> = x<sub>i</sub> * (-0.04) + y<sub>i</sub> * 0.85 + 1.6</li>
+							<li>7%: x<sub>i+1</sub> = x<sub>i</sub> * 0.2 + y<sub>i</sub> * (-0.26), y<sub>i+1</sub> = x<sub>i</sub> * 0.23 + y<sub>i</sub> * 0.22 + 1.6</li>
+							<li>7%: x<sub>i+1</sub> = x<sub>i</sub> * (-0.15) + y<sub>i</sub> * 0.28, y<sub>i+1</sub> = x<sub>i</sub> * 0.26 + y<sub>i</sub> * 0.24 + 0.44</li>
+						</ul>
+					</li>
+					<li>重複上一步，建議至少一萬次</li>
+				</ol>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>本週配分為僅解出一題得 70 分，兩題都解出則得 100 分。</li>
+	<li>本週題目允許使用任何 pip 已提供之函式庫。</li>
+</ul>
+
+</body></html>
