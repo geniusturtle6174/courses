@@ -1,0 +1,47 @@
+﻿<html>
+<head>
+	<title>0322--數位編輯系統</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushXml.js"></script>
+	<script type="text/javascript" src="shBrushMine.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<base target="_blank">
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	<style>
+		body{margin:20px 30px 20px 30px;}
+	</style>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">平時練習 03 第二題</p>
+
+<p style="background-color:#f99;font-size:17pt">陣列內容說明</p>
+假設有一個二維陣列，第一層代表許多學生，第二層代表他們的基本資料（固定為僅含姓名和學號），如下：
+<pre class="brush: htmljsphp">
+$test = array(
+	array('name' => 'Alice', 'id' => '411000123'),
+	array('name' => 'Bob', 'id' => '411000456'),
+	array('name' => 'Cindy', 'id' => '411000789')
+);
+</pre>
+
+<p style="background-color:#f99;font-size:17pt">輸出範例說明</p>
+請輸出成為一個表格，如下：
+<table border="1">
+	<tr><th>Name</th><th>ID</th></tr>
+	<tr><td>Alice</td><td>411000123</td></tr>
+	<tr><td>Bob</td><td>411000456</td></tr>
+	<tr><td>Cindy</td><td>411000789</td></tr>
+</table>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>顯示風格的細節不必完全相同，但是內容和順序要跟原始陣列相同。</li>
+</ul>
+
+</body></html>

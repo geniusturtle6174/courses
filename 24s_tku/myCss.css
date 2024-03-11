@@ -1,14 +1,14 @@
+@charset "UTF-8";
+
 body{margin:20px 30px 20px 30px;}
 
 a{text-decoration:none;color:blue}
 a:hover{text-decoration:none;color:red}
-.myTitle{font-size:17pt;font-family:"¼Ð·¢Åé","DFKai-sb"}
-ol, ul, li{font-size:12pt;font-family:"·s²Ó©úÅé";margin-top:0px;margin-bottom:0px;}
+.myTitle{font-size:17pt;font-family:"æ¨™æ¥·é«”","DFKai-sb"}
+ol, ul, li{font-size:12pt;margin-top:0px;margin-bottom:0px;}
 td.slide ul{padding-left:20px;}
 
 .small{font-size:1pt}
-
-
 
 table{border:0;border-collapse:collapse;}
 th{border-bottom:double;background-color:#ff9;}
@@ -30,6 +30,5 @@ td.slide{border:solid 1px;background-color:#eff;padding:4px;}
 	.tdMid{width:720px;}
 	.tdRight{width:288px;}
 }
-
 
 blockquote{width:90%;position:absolute;top:0;}
