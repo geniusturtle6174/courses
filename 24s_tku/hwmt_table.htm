@@ -1,0 +1,96 @@
+﻿<html>
+<head>
+	<title>線上教材：WEB 程式設計</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css" />
+	<base target="_blank">
+	<script type="text/javascript" src="myJs.js"></script>
+</head>
+
+<body bgcolor="#ccccff">
+
+<blockquote>
+
+<p>範例情境：一個陽春版的線上學習系統，目前僅供使用者登入、登出、修改部分資料、列出參與課程等功能，目前有三張資料表。</p>
+
+<p>account 資料表，用於儲存使用者帳號密碼，設定及範例內容如下：</p>
+<table class="slide" align=center>
+	<tr>
+		<th class="slide">id (使用者流水號)<br>(INT，PRIMARY，A_I)</th>
+		<th class="slide">account (帳號)<br>(VARCAHR，64)</th>
+		<th class="slide">passwd (密碼)<br>(VARCAHR，64)</th>
+		<th class="slide">realname (本名)<br>(VARCAHR，32，utf8_general_ci)</th>
+		<th class="slide">nickname (暱稱)<br>(VARCAHR，32，utf8_general_ci)</th>
+	</tr>
+	<tr>
+		<td class="slide">1</td>
+		<td class="slide">Alice</td>
+		<td class="slide">passwd_1</td>
+		<td class="slide">愛麗絲</td>
+		<td class="slide">絲絲</td>
+	</tr>
+	<tr>
+		<td class="slide">2</td>
+		<td class="slide">Bob</td>
+		<td class="slide">passwd_2</td>
+		<td class="slide">鮑伯</td>
+		<td class="slide">伯伯</td>
+	</tr>
+	<tr>
+		<td class="slide">3</td>
+		<td class="slide">Cindy</td>
+		<td class="slide">passwd_3</td>
+		<td class="slide">心蒂</td>
+		<td class="slide"></td>
+	</tr>
+</table>
+
+<p>course 資料表，用於儲存有哪些課程，設定及範例內容如下：</p>
+<table class="slide" align=center>
+	<tr>
+		<th class="slide">id (課程流水號)<br>(INT，PRIMARY，A_I)</th>
+		<th class="slide">number (科號)<br>(VARCAHR，16)</th>
+		<th class="slide">name (課程名稱)<br>(VARCAHR，64，utf8_general_ci)</th>
+		<th class="slide">description (課程描述)<br>(VARCAHR，512，utf8_general_ci)</th>
+	</tr>
+	<tr>
+		<td class="slide">1</td>
+		<td class="slide">0322</td>
+		<td class="slide">數位編輯系統</td>
+		<td class="slide">寫網頁後端，用 PHP 和 SQL</td>
+	</tr>
+</table>
+
+<p>course_member 資料表，用於儲存某個人在某門課的身分，設定及範例內容如下：</p>
+<table class="slide" align=center>
+	<tr>
+		<th class="slide">id (資料流水號)<br>(INT，PRIMARY，A_I)</th>
+		<th class="slide">user_id (使用者流水號)<br>(INT)</th>
+		<th class="slide">course_id (課程流水號)<br>(INT)</th>
+		<th class="slide">m_type (身分別，只會有老師和學生兩種)<br>(VARCAHR，8，utf8_general_ci)</th>
+	</tr>
+	<tr>
+		<td class="slide">1</td>
+		<td class="slide">1</td>
+		<td class="slide">1</td>
+		<td class="slide">老師</td>
+	</tr>
+	<tr>
+		<td class="slide">2</td>
+		<td class="slide">2</td>
+		<td class="slide">1</td>
+		<td class="slide">學生</td>
+	</tr>
+	<tr>
+		<td class="slide">3</td>
+		<td class="slide">3</td>
+		<td class="slide">1</td>
+		<td class="slide">學生</td>
+	</tr>
+</table>
+
+<p></p>
+
+</blockquote>
+
+</body></html>

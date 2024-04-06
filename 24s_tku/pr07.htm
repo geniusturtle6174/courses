@@ -1,0 +1,47 @@
+﻿<html>
+<head>
+	<title>0322--數位編輯系統</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">平時練習 07</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+<ul>
+	<li><a href="https://leetcode.com/problems/customers-who-never-order/">183. Customers Who Never Order</a>。</li>
+	<li><a href="https://leetcode.com/problems/top-travellers/">1407. Top Travellers</a>。提示：把 null 變成 0 的方法不在教材中，你需要自己到網路上尋求解答。</li>
+	<li>請下載並匯入「SQL 指令」教材的範例資料表後在 phpmyadmin 當中匯入，並使用 SQL 語句選出<span id="q3-singer"></span>唱過的歌曲的<span id="q3-song"></span>（提示：SELECT singer.name, singer.type, song.name, song.language, song.youtube FROM song INNER JOIN singer on ... WHERE ...）</li>
+</ul>
+
+
+<script>
+
+q3_singer_all = [
+	'梁靜茹',
+	'五月天',
+	'初音未來',
+	'鏡音鈴',
+	'女歌手',
+	'團體',
+	'軟體',
+];
+q3_song_all = ['歌曲名稱', '歌曲語言', '水管連結'];
+
+document.getElementById('q3-singer').innerHTML = q3_singer_all[Math.floor(Math.random()*q3_singer_all.length)];
+document.getElementById('q3-song').innerHTML = q3_song_all[Math.floor(Math.random()*q3_song_all.length)];
+
+</script>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>每題 40 分，最高採計至 100 分。</li>
+	<li>本週有到課並解出至少一題，或者本週內完成正式請假者，可以在次週課堂 demo 未解出之題目並以八折計分，其餘狀況不收遲交。請假者須提供假條截圖，教師亦可能視情況要求你提出其他佐證，例如就醫證明等。</li>
+	<li>Demo 時，教師會要求你回答 SQL 語句的某個部分，是為了符合題目條件的哪個部分；或者題目條件的某個部分，撰寫在 SQL 語句中是哪個部分。對於第三題，教師可能會要求你重新整理，並根據螢幕上的變動來修改指令。</li>
+	<li>對於第三題，雖然 singer 資料表中的男歌手、女歌手，以及團體都各只有一筆資料，但你的 SQL 指令不應利用此狀況。</li>
+</ul>
+
+</body></html>
