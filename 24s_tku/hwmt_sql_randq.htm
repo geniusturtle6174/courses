@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+	<title>0322--數位編輯系統</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">期中作業 SQL 區出題</p>
+
+<p style="background-color:#f99;font-size:17pt">題目內容</p>
+<ol>
+	<li>選出帳號(account.acount)為 <span id="q1-acc"></span>，密碼(account.passwd)為 <span id="q1-pwd"></span> 的人的相關資訊。請留意，如果帳號密碼配對不正確，你的 SQL 應該回傳空的結果。</li>
+	<li>依照 course 資料表的 <span id="q2-col"></span> 欄位的 <span id="q2-ord"></span> 排序列出課程。</li>
+	<li>列出使用者流水號為 <span id="q3-user"></span> 的人所參加的所有課程的流水號，依課程流水號遞增排序。</li>
+	<li>列出使用者流水號為 <span id="q4-user"></span> 的人所參加的所有課程的科號、名稱以及描述，依科號遞增排序。</li>
+	<li>列出帳號(account.acount)為 <span id="q5-acc"></span> 的人所參加的所有課程的流水號及參加身分。</li>
+</ol>
+
+<script>
+
+account_all = [
+	'Alice', 'Bob', 'Cindy', 'Donald', 'Ed',
+	'Ford', 'Gary', 'Hamiltion', 'Inez', 'Jules',
+	'Karina', 'Lauren', 'Morgan', 'Nokia', 'Oliver',
+	'Patrick', 'Quinn', 'Renee', 'Sandy', 'Tab',
+	'Urania', 'Venus', 'Wanda', 'Xavier', 'Yale',
+	'Ziv'
+];
+passwd_all = [
+	'passwd_1', 'passwd_2', 'passwd_3', 'passwd_4', 'passwd_5',
+	'passwd_6', 'passwd_7', 'passwd_8', 'passwd_9', 'passwd_j',
+	'passwd_k', 'passwd_l', 'passwd_m', 'passwd_n', 'passwd_o',
+	'passwd_p', 'passwd_q', 'passwd_r', 'passwd_s', 'passwd_t',
+	'passwd_u', 'passwd_v', 'passwd_w', 'passwd_x', 'passwd_y',
+	'passwd_z'
+];
+
+q1_rnd = Math.floor(Math.random()*account_all.length);
+q1_rnd_2 = Math.floor(Math.random()*100);
+document.getElementById('q1-acc').innerHTML = account_all[q1_rnd];
+document.getElementById('q1-pwd').innerHTML = (q1_rnd_2<=30)?"1234":passwd_all[q1_rnd];
+
+q2_rnd = Math.floor(Math.random()*100);
+q2_rnd_2 = Math.floor(Math.random()*100);
+document.getElementById('q2-col').innerHTML = (q2_rnd<=60)?"科號(number)":"課程名稱(name)";
+document.getElementById('q2-ord').innerHTML = (q2_rnd_2<=60)?"遞增":"遞減";
+
+document.getElementById('q3-user').innerHTML = 1 + Math.floor(Math.random()*26);
+document.getElementById('q4-user').innerHTML = 1 + Math.floor(Math.random()*26);
+
+q5_rnd = Math.floor(Math.random()*account_all.length);
+document.getElementById('q5-acc').innerHTML = account_all[q5_rnd];
+
+
+document.getElementsByTagName('li')[Math.floor(Math.random()*3)].style.setProperty("text-decoration", "line-through");
+document.getElementsByTagName('li')[Math.floor(Math.random()*2)+3].style.setProperty("text-decoration", "line-through");
+</script>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>選出的欄位可以多，但是不能少；選出的資料則不能多，也不能少。</li>
+	<li>對於明確要求排序的題目，你回答的 SQL 也必須明確寫出排序相關的指令，才能取得該題全部分數。</li>
+</ul>
+
+</body></html>
