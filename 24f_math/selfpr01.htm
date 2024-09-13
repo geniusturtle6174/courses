@@ -1,0 +1,51 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">自我練習 01</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+<ul>
+	<li>撰寫一 function is_mul_of_eleven，輸入是一個未滿 10000 的正整數，請你依照「奇數位數的數字和，與偶數位數的數字和的差為 0 或 11 的倍數」的方式，判斷該數是不是 11 的倍數。若是，請回傳 True，否則請回傳 False。</li>
+	<li>撰寫一 function real_sol_num，輸入是三個浮點數 a、b、c，且 a 不為 0，代表方程式 ax<sup>2</sup> + bx + c = 0 中的 a、b、c。請你計算該方程式相異實根的個數，若有兩相異實根應回傳 2，有重根時回傳 1，無實根時回傳 0。</li>
+	<li>撰寫一 function get_int_grade，輸入是一個非負浮點數，請將該數當作某人在本課程中取得的原始分數，並依照本課程「成績最高給至百分制 99，小數取整時除 [59, 60) 及 [89, 90) 區間為無條件捨去外，其餘為四捨五入」的原則，計算出對應的本課程成績。為求簡便，其中的四捨五入，可以直接使用「round」計算。</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>必須由以下範例修改。你能修改的部分，只有標示為「pass」的部份（即函式內容），以及測試時可以修改傳入的值。
+<pre class="brush: py">
+def is_mul_of_eleven(n):
+	pass
+
+
+def real_sol_num(a, b, c):
+	pass
+
+
+def get_int_grade(g):
+	pass
+
+
+print(is_mul_of_eleven(123))
+
+print(real_sol_num(1, 2, 3))
+
+print(get_int_grade(67.89))
+</pre>
+	</li>
+</ul>
+
+</body></html>
