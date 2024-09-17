@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">隨堂練習 03</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+<ul>
+	<li>(15%)給定一個內容都是數字的串列，請僅以一行程式計算其平均。</li>
+	<li>(20%)給定一個內容都是正整數的串列，請僅以一行程式，依照「先依照最後兩位排序，最後兩位相同時依照最後三位排序，最後三位也相同時依照最後四位排序，最後四位也相同時保留原輸入順序」的原則來排序，排序時皆以遞增（由小到大）來排序。</li>
+	<li>(40%)某商店曾經舉辦過一個活動，內容是多位同行者兩兩一組，每組的兩人身高差多少，就可以獲贈多少隻蝦子。當然不同的分組方式，總共可以拿到的蝦子數就不同。請你撰寫一個 function get_shrimp_num，計算當 6 或 7 人同行時，他們最多總共可以拿到多少隻蝦。相關細節說明如下：
+		<ul>
+			<li>輸入是一個 list，長度為 6 或 7，每個元素都是正整數，代表 6 個人的身高。</li>
+			<li>輸出是一個整數，代表這 6 或 7 人最多總共可以拿到多少隻蝦。</li>
+			<li>你的 function 的實作，不能因為輸入身高的順序改變而改變。</li>
+			<li>(5% bouns)不能使用 if-else 或任何類似具條件判斷效果之語法。</li>
+		</ul>
+	</li>
+	<li>(40%)撰寫一個 function get_day_num，輸入為一個正整數，代表年份，回傳一個串列，代表該年每個月依次各有多少天。以輸入為 2024 年為例，你應該回傳 [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]。</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>本週練習題最高採計至 110 分。</li>
+	<li>「一行程式」的參考標準為最多只有一個等號，實際情況以教師或助教判定為準。</li>
+	<li>前兩題可以不用包裝在 function 之內。</li>
+	<li>排隊 demo 請使用<a href="https://forms.gle/5Qrq9T4DJJRyPa8r8">此連結</a>。</li>
+	<li>如上週公告所述，若你在實作本週練習中碰到的困難，被教師或助教認定是實作「自我練習 01」時就應該要碰過的，則教師或助教會檢視你的自我練習內容（即程式碼等），並直到認為你順利解決完自我練習的問題前，不會評定你本週隨堂練習的分數。請留意，若無法在本週原定上課時間內完成本隨堂練習者，仍需由教師另案決定是否得以補交。</li>
+	<li>對於程式語法尚未熟練者，必須由以下範例修改。你能修改的部分，只有標示為「pass」的部份、測試時可以修改傳入的值，以及新增其他用於被這兩個 function 呼叫的 function。未完全遵守上述修改規則者，教師或助教可能認定你已經對程式語法相當熟練，從而對你有明顯較嚴格的要求標準。
+<pre class="brush: py">
+def get_shrimp_num(heights):
+	pass
+
+
+def get_day_num(year):
+	pass
+
+
+# Q1
+nums = [12, 34, 90, 78, 56] # 測試時可修改串列內容
+avg = pass
+print(avg)
+
+# Q2
+nums = [34567, 99067, 90001, 12345] # 測試時可修改串列內容
+result = pass
+print(result)
+
+# Q3
+print(get_shrimp_num([200, 157, 123, 189, 170, 165]))
+
+# Q4
+print(get_day_num(2024))
+</pre>
+	</li>
+</ul>
+
+</body></html>
