@@ -1,0 +1,61 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		input = prompt('Enter passwrd:')
+		if(input!='0800092000'){
+			document.removeChild(document.documentElement);
+		}
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">Q1: League of Legends</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>檔名必須為「q1_你的學號.py」，例如 q1_9962816.py</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+曾經有人在某遊戲的比賽賽程中途，做了如下的預測：<br><br>
+<center><img src="pics/lol.png"></center><br><br>
+
+請你撰寫一個函式 game_pred，輸入 A 隊韓國人人數、A 隊東南亞人人數、B 隊韓國人人數，以及 B 隊東南亞人人數，來根據上圖的規則做出勝負預測。請注意，你的程式不應受到該遊戲每隊人數 5 人的限制。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+四個非負整數，依次代表 A 隊韓國人人數、A 隊東南亞人人數、B 隊韓國人人數，以及 B 隊東南亞人人數。
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+回傳一個整數，-1 代表 A 隊勝，0 代表無法依據規則預測，1 代表 B 隊勝。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+[12, 34, 56, 78]
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+1
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>測資有兩組，其中一組保證答案不為 0，即一定可依據規則預測出勝負。</li>
+	<li>程式架構範例如下，建議只修改標為 pass 的地方，否則若影響自動批改時，可能會有折扣：
+<pre class="brush: py">
+def game_pred(a_kr, a_se, b_kr, b_se):
+	pass
+
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+</ul>
+
+</body></html>

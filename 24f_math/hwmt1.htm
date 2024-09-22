@@ -1,0 +1,53 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript">
+		input = prompt('Enter passwrd:')
+		if(input!='0800092000'){
+			document.removeChild(document.documentElement);
+		}
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">期中作業</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>Deadline: 10/??</li>
+	<li>繳交方式: eeclass 作業上傳區，檔名規定詳如各題說明</li>
+	<li>Demo 時間地點: 10/?? 原上課時段於原教室</li>
+	<li>Pylint Bonus: 5 分</li>
+	<li>評分方式: 各題滿分皆為 100，本作業總分為 (&Sigma;<sub>i</sub>(第 i 題正確性 * 第 i 題 demo / 100)) / 4 + Pylint Bonus</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+
+<ul>
+	<li><a href="hwmt1-1.htm">Q1: League of Legends</a>。</li>
+	<li><a href="hwmt1-2.htm">Q2: ...</a>。</li>
+	<li><a href="hwmt1-3.htm">Q3: ...</a>。</li>
+	<li>Q4: 請解答此 LeetCode 問題：<a href="https://leetcode.com/problems/most-frequent-even-element/">2404. Most Frequent Even Element</a>。
+		<ul>
+			<li>檔名必須為「q4_你的學號.py」，例如 q4_9962816.py。</li>
+			<li>class 及 function 名稱請依 LeetCode 規定，檔案內若有任何不屬於 class 中的程式碼，應包含在「if __name__ == '__main__':」當中，否則可能會有折扣。</li>
+			<li>本課程評分用測資僅一組，內容符合 LeetCode 之規定。</li>
+		</ul>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>Pylint Bonus
+		<ul>
+			<li>每題評分指令皆為「pylint --disable=C0103,C0301,C0111,R0201,R1705,C1801,R0903 your_file.py」。評分結果以教師安裝的版本(2.2.2)為準。</li>
+			<li>每題給分方式為 max(pylint-score, 0)，整體分數取 sorted(各題分數)[1] 乘以 0.5。</li>
+			<li>若在程式碼中，有試圖關閉或避開評分指令未列出的扣分項目等行為時，本 bonus 不給分。</li>
+		</ul>
+	</li>
+</ul>
+
+</body></html>
