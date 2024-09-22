@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		input = prompt('Enter passwrd:')
+		if(input!='0800092000'){
+			document.removeChild(document.documentElement);
+		}
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">Q2: Will You Survive?</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>檔名必須為「q2_你的學號.py」，例如 q2_9962816.py</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+假設你被綁架到一個兩邊都是懸崖的地方，站著的位置是原點，往左或右 n 步就會掉下懸崖（n-1 步則不會）。綁匪告訴你可以走幾步活動一下，但是要把向左或向右的順序先告訴他。之後，綁匪可能把你給他的順序，一個一個讀（即串列索引的 0, 1, 2, ...），兩個兩個讀（即串列索引的 1, 3, 5, ...），三個三個讀（即串列索引的 2, 5, 8, ...），...，或者 k 個 k 個讀（即串列索引的 k-1, 2k-1, 3k-1, ...），直到 k 等於 n（即只讀最後一個），並要你照著他讀的來走動。請你寫一個 function will_survive，輸入懸崖的寬度，以及要給綁匪的走法，輸出是否不管綁匪幾個幾個地來讀，你都可以活著。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+有兩個輸入參數。第一個是一個正整數，代表題目敘述的 n；第二個是一個串列，元素只有 -1 和 1 兩種，代表你在懸崖上的不同走向。
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+回傳 True 或 False。True 代表活著（即不會掉下去），False 代表死亡（即會掉下去）。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+2, [1, -1, -1, 1, 1, -1, -1, 1]
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+False
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>測資只有一組。</li>
+	<li>程式架構範例如下，建議只修改標為 pass 的地方，否則若影響自動批改時，可能會有折扣：
+<pre class="brush: py">
+def will_survive(n, steps):
+	pass
+
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+</ul>
+
+</body></html>
