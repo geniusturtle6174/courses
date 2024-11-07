@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		input = prompt('Enter passwrd:')
+		if(input!='0800092000'){
+			document.removeChild(document.documentElement);
+		}
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">Q1: Try to Survive</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>檔名必須為「q1_你的學號.py」，例如 q1_9962816.py</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+假設你被綁架到一個<span data-explain="或前後左右四面">左右兩邊</span>都是懸崖的地方，站著的位置是原點，<span data-explain="往上或下走則沒有步數限制">往左或右 n 步就會掉下懸崖（n-1 步則不會）</span>。綁匪告訴你可以走 s 步活動一下，但是要把<span data-explain="或向上或向下">向左或向右</span>的順序先告訴他。之後，綁匪可能把你給他的順序，一個一個讀（即串列索引的 0, 1, 2, ...），兩個兩個讀（即串列索引的 1, 3, 5, ...），三個三個讀（即串列索引的 2, 5, 8, ...），...，或者 k 個 k 個讀（即串列索引的 k-1, 2k-1, 3k-1, ...），直到 k 等於 s（即只讀最後一個），並要你照著他讀的來走動。請你寫一個 function try_to_survive，輸入懸崖單側的寬度 n，以及綁匪要求的步數 <span data-explain="和讀法 k">s</span>，盡可能輸出一種不管綁匪幾個幾個地來讀，你都可以活著的走法。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+有<span data-explain="或三個也可以">兩個</span>輸入參數，都是正整數，分別是題目敘述的<span data-explain="和 k"> n 和 s</span>。
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+以串列的方式，回傳一種不管綁匪幾個幾個地來讀，你都可以活著的走法。串列元素<span data-explain="或加上 i 和 -i 共四種">只有 -1 和 1 兩種</span>，代表你在懸崖上的不同走向。若有多種走法可以存活，你應該盡可能先往右（即 <span style="font-size: 0px;">-</span>1）走。如果不可能存活，請回傳空的串列。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+2, 11
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+<span data-explain="或 [i, 1, -1, -i, -1, i, -i, i, -i, -1, -i]">[1, -1, -1, 1, -1, 1, <span style="font-size: 0px;">-</span>1, -1, -1, 1, <span style="font-size: 0px;">-</span>1]</span>
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>測資只有一組。</li>
+	<li>程式架構範例如下，建議只修改標為 pass 的地方，否則若影響自動批改時，可能會有折扣：
+<pre class="brush: py">
+def try_to_survive(n, s):
+	pass
+
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+	<li>若有使用期中作業一第二題「Will You Survive」的程式碼，或者撰寫任何其他函式，應一併貼在本題檔案中繳交，如下：
+<pre class="brush: py">
+def will_survive(n, steps):
+	pass
+
+
+def try_to_survive(n, s):
+	pass
+
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+</ul>
+
+</body></html>

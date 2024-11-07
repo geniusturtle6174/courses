@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript">
+		// input = prompt('Enter passwrd:')
+		// if(input!='0800092000'){
+		// 	document.removeChild(document.documentElement);
+		// }
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">期中作業二</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>Deadline: 11/18 (Mon.) 08:00</li>
+	<li>繳交方式: eeclass 作業上傳區，檔名規定詳如各題說明</li>
+	<li>Demo 時間地點: 11/21 原上課時段於原教室，另視情況使用課前與課後時段</li>
+	<li>Pylint Bonus: 5 分，依工具評定之程式碼風格分數給分</li>
+	<li>評分方式: 各題滿分皆為 100，本作業總分為 (&Sigma;<sub>i</sub>(第 i 題正確性 * 第 i 題 demo / 100)) / 4 + Pylint Bonus</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+
+<ul>
+	<li><a href="hwmt2-1.htm">Q1: Try to Survive</a>。</li>
+	<li><a href="hwmt2-2.htm">Q2: ...</a>。</li>
+	<li>Q3: 請解答此 LeetCode 問題：<a href="https://leetcode.com/problems/count-days-spent-together/">2409. Count Days Spent Together</a>。
+		<ul>
+			<li>檔名必須為「q3_你的學號.py」，例如 q3_9962816.py。</li>
+			<li>Class 及 function 格式請依 LeetCode 規定。</li>
+			<li>本課程評分用測資僅一組，內容符合 LeetCode 之規定。</li>
+		</ul>
+	</li>
+	<li>Q4: 請解答此 LeetCode 問題：<a href="https://leetcode.com/problems/first-completely-painted-row-or-column/">2661. First Completely Painted Row or Column</a>。
+		<ul>
+			<li>檔名必須為「q4_你的學號.py」，例如 q4_9962816.py。</li>
+			<li>Class 及 function 格式請依 LeetCode 規定。</li>
+			<li>若語言選則 Python3，繳交作業時請把檔案開頭加上「from typing import List」，或者把「List」全部改為「list」。若選擇 Python 則可不處理。</li>
+			<li>提示：平常從矩陣取值，是知道 i 和 j 再拿出值，而這題可能需要你建立一個從矩陣的值反查出 i 和 j 的字典，否則會跑太慢。</li>
+			<li>本課程評分用測資有兩組，內容皆符合 LeetCode 之規定，且其中一組的 m 和 n 會夠小，讓你不用建立上述的字典也有機會得分。</li>
+		</ul>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>每題給分最小單位為一組測資，一組測資包含多筆（一筆為一個輸入&輸出的配對），每組的所有測資全對，才會拿到該組測資的分數。</li>
+	<li>LeetCode 題之給分仍依課程測資為準。雖然課程測資未必會比 LeetCode 的測資嚴格，但仍建議各位不要打賭，亦即請先獲得 LeetCode Accepted 之後再交作業。</li>
+	<li>檔案內若有任何不屬於 function（前兩題）或 class（後兩題） 中的程式碼，應包含在「if __name__ == '__main__':」當中，否則會有折扣。</li>
+	<li>Pylint Bonus
+		<ul>
+			<li>每題評分指令皆為「pylint --disable=C0103,C0111,C0114,C0116,C0301,C1801,R0903,R0911,R1705 your_file.py」。評分結果以教師安裝的版本(3.3.0)為準。</li>
+			<li>每題給分方式為 max(pylint-score, 0)，整體分數取各題分數最小值乘以 0.35 加第二小值乘以 0.15。</li>
+			<li>若在任一題的程式碼中，有試圖關閉或避開評分指令未列出的評比項目等行為時，本 bonus 不給分。</li>
+		</ul>
+	</li>
+	<li>若遇有數學符號等方面之顯示差異，以課程網頁在 Windows 電腦版 Chrome 或 Edge 瀏覽器最新版開啟時之顯示效果為準。</li>
+</ul>
+
+</body></html>

@@ -1,0 +1,48 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">隨堂練習 09</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+<p>解出一題 60 分，兩題都解出得 100 分。</p>
+<ul>
+	<li>Mandelbrot set。考慮算式 z<sub>n</sub> = z<sub>n-1</sub><sup>2</sup> + c，其中 c 為複數平面上一點，且 z<sub>0</sub> = 0 時，Mandelbrot set 為使 z<sub>n</sub> 不發散的所有 c 的集合。請選取一些 c 以及計算相對應的 z<sub>n</sub>，並將其中所有可讓 z<sub>n</sub> 不會發散的 c 畫出來。提示：
+		<ul>
+			<li>c 的實軸和虛軸都建議在 [-2, 2] 之間取點，例如 np.linspace(-2, 2, 101)</li>
+			<li>可以只算到 n = 50 或 100（即 z<sub>50</sub> 或 z<sub>100</sub>），若其中任何一個 z<sub>i</sub> &gt; 2 則視為會發散，反之則視為不發散。</li>
+			<li>可以參考「complex」，以在程式中進行複數的建立與運算。</li>
+		</ul>
+	</li>
+	<li>Restricted chaos game。請依照下列步驟畫圖：
+		<ol>
+			<li>繪製一個正方形，你可以只畫四個點。</li>
+			<li>自正方形內隨機選取一點並繪出。</li>
+			<li>自正方形四個頂點中，隨機選取一個。但請注意：第 i 次選取時，不能選擇第 i - 1 次用過的點。</li>
+			<li>將前兩步的兩個點取中點。</li>
+			<li>以第四步算出的中點，帶入第二步。</li>
+			<li>重複步驟二到五，建議至少五千次。</li>
+		</ol>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>Demo 排隊表單請點<a href="#">此處</a>。</li>
+	<li>本週題目皆允許使用 numpy 和 matplotlib。</li>
+</ul>
+
+</body></html>
