@@ -1,0 +1,136 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		input = prompt('Enter passwrd:')
+		if(input!='0800092000'){
+			document.removeChild(document.documentElement);
+		}
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">Q2: Conway's Game of Life</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>檔名必須為「q2_你的學號.py」，例如 q2_9962816.py</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+康威生命遊戲是用一個矩陣代表世界，而矩陣的每個元素代表一個活著或死亡的細胞。每個細胞在下一時刻的生死，取決於相鄰細胞的狀態：例如若相鄰的活細胞過多，則這個細胞或在下一刻因缺乏資源而死去<span style="font-size: 0px;">活來</span>；而若相鄰的細胞過少，則這個細胞又會因為太過孤獨而死去。在本題中，設定的規則如下：
+<ul>
+	<li>若一個細胞的相鄰活細胞個數，小於<span style="font-size: 0px;">等於</span> 2 個或大於<span style="font-size: 0px;">等於</span> 3 個，則該細胞下一時刻為死亡。</li>
+	<li>若一個活細胞的相鄰活細胞個數，為 2 個或 3 <span style="font-size: 0px;">或 4</span> 個，則該細胞下一時刻仍為存活。</li>
+	<li>若一個死細胞的相鄰活細胞個數為 3 <span style="font-size: 0px;">或 4</span> 個，則該細胞下一時刻轉為存活。</li>
+</ul>
+請你撰寫一個函式 get_next，輸入為這一時刻的矩陣，輸出為下一時刻的矩陣。矩陣皆應以 numpy array 的形式傳遞。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+一個 numpy array，元素只有 0 或 1 兩種，0 代表死細胞，1 代表活細胞。
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+同輸入說明。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+[[0 1 1 0]<br>
+&nbsp;[1 1 0 0]<br>
+&nbsp;[0 1 0 0]<br>
+&nbsp;[0 0 0 1]<br>
+&nbsp;[0 0 1 0]]
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+[[1 1 1 0]<br>
+&nbsp;[1 0 0 0]<br>
+&nbsp;[1 1 1 0]<br>
+&nbsp;[0 0 1 0]<br>
+&nbsp;[0 0 0 0]]
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>本題應使用 numpy。</li>
+	<li>測資只有一組。</li>
+	<li>程式架構範例如下，建議只修改標為 pass 的地方，否則若影響自動批改時，可能會有折扣：
+<pre class="brush: py">
+import numpy as np
+
+def get_next(mat):
+	pass
+
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+	<li>做完題目以後如果有空閒的話，可以把下列程式中的 pass 換成你的內容並執行，看看會出現什麼畫面：
+<pre class="brush: py">
+import matplotlib.animation as animation
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig = plt.figure()
+
+mat = np.zeros((100, 100))
+mat[10:12, 3] = 1
+mat[9, 4] = 1
+mat[12, 4:9] = 1
+mat[10, 7:9] = 1
+mat[11, 9] = 1
+
+mat[8, 12] = 1
+mat[8, 13] = 1
+mat[9, 12] = 1
+mat[14, 12] = 1
+mat[13, 12] = 1
+mat[14, 13] = 1
+mat[9, 15] = 1
+mat[13, 15] = 1
+mat[10:13, 16] = 1
+
+mat[12, 24] = 1
+mat[13, 25] = 1
+mat[14, 23:26] = 1
+
+mat[9, 27] = 1
+mat[8:11, 28] = 1
+mat[7:12, 29] = 1
+mat[6:8, 30] = 1
+mat[11:13, 30] = 1
+mat[7:12, 31] = 1
+mat[7, 32] = 1
+mat[8, 33] = 1
+mat[9, 34] = 1
+mat[10, 33] = 1
+mat[11, 32] = 1
+
+mat[8:10, 37:39] = 1
+
+im = plt.imshow(mat, animated=True)
+plt.colorbar()
+
+def get_next(mat):
+    pass
+
+
+def updatefig(*args):
+    global mat
+    mat = get_next(mat)
+    im.set_array(mat)
+    return im,
+
+
+ani = animation.FuncAnimation(fig, updatefig, interval=10, blit=True)
+plt.show()
+</pre>
+	</li>
+</ul>
+
+</body></html>
