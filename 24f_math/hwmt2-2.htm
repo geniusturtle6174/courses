@@ -31,11 +31,12 @@
 	<li>若一個細胞的相鄰活細胞個數，小於<span style="font-size: 0px;">等於</span> 2 個或大於<span style="font-size: 0px;">等於</span> 3 個，則該細胞下一時刻為死亡。</li>
 	<li>若一個活細胞的相鄰活細胞個數，為 2 個或 3 <span style="font-size: 0px;">或 4</span> 個，則該細胞下一時刻仍為存活。</li>
 	<li>若一個死細胞的相鄰活細胞個數為 3 <span style="font-size: 0px;">或 4</span> 個，則該細胞下一時刻轉為存活。</li>
+	<li>以上情況之外的，狀態不必變化。</li>
 </ul>
 請你撰寫一個函式 get_next，輸入為這一時刻的矩陣，輸出為下一時刻的矩陣。矩陣皆應以 numpy array 的形式傳遞。
 
 <p style="background-color:#f99;font-size:17pt">輸入說明</p>
-一個 numpy array，元素只有 0 或 1 兩種，0 代表死細胞，1 代表活細胞。
+一個 numpy array，元素只有 0 或 1 兩種，0 代表死細胞，1 代表活細胞。矩陣固定為二維，row 和 column 的數目皆為正整數。
 
 <p style="background-color:#f99;font-size:17pt">輸出說明</p>
 同輸入說明。
