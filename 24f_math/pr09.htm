@@ -22,7 +22,7 @@
 	<li>Mandelbrot set。考慮算式 z<sub>n</sub> = z<sub>n-1</sub><sup>2</sup> + c，其中 c 為複數平面上一點，且 z<sub>0</sub> = 0 時，Mandelbrot set 為使 z<sub>n</sub> 不發散的所有 c 的集合。請選取一些 c 以及計算相對應的 z<sub>n</sub>，並將其中所有可讓 z<sub>n</sub> 不會發散的 c 畫出來。提示：
 		<ul>
 			<li>c 的實軸和虛軸都建議在 [-2, 2] 之間取點，例如 np.linspace(-2, 2, 101)</li>
-			<li>可以只算到 n = 50 或 100（即 z<sub>50</sub> 或 z<sub>100</sub>），若其中任何一個 z<sub>i</sub> &gt; 2 則視為會發散，反之則視為不發散。</li>
+			<li>可以只算到 n = 50 或 100（即 z<sub>50</sub> 或 z<sub>100</sub>），若其中任何一個 |z<sub>i</sub>| &gt; 2 則視為會發散，反之則視為不發散。</li>
 			<li>可以參考「complex」模組，以在程式中進行複數的建立與運算。</li>
 		</ul>
 	</li>
