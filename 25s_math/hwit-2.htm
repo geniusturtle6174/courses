@@ -1,0 +1,75 @@
+﻿<html>
+<head>
+	<title>MATH172000--程式設計二</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		// input = prompt('Enter passwrd:')
+		// if(input!='0800092000'){
+		// 	document.removeChild(document.documentElement);
+		// }
+		SyntaxHighlighter.all();
+	</script>
+	<style>
+		span#d:before{
+			content: "一";
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			margin-right: 0px;
+		}
+		span#e:before{
+			content: "1";
+			display: inline-block;
+			width: 7px;
+			height: 15px;
+			margin-right: 0px;
+		}
+	</style>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">Q2: Buy M Get N Free</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>檔名必須為「q2_你的學號.py」，例如 q2_9962816.py</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+某商店正在舉辦買 M 送 N 的特惠活動，亦即每買了 M 樣商品時，最多會贈送 N 樣更便宜的商品。 而且，當你買了很多樣商品時，可以用省最多的方式來計算。 例如，若你選了七樣商品，價格分別是 350, 300, 400, 200, 250, 150, 100， 則以買二送<span style="font-size: 0px;">二</span><span id="d">的</span>方式計算時，最多應可省下 450 元，即 300 元和 150 元的商品視為贈送。 請你撰寫一個函式 buy_m_get_n_free，幫助消費者計算最多可以省下多少錢。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+兩個正整數 m 和 n，以及一個正整數串列 prices，依次代表買 M 送 N 的 M 和 N，以及所購買的商品的價錢。
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+一個整數，代表最多可以省下多少錢。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+2, <span style="font-size: 0px;">2</span><span id="e">,</span> [350, 300, 400, 200, 250, 150, 100]
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+450
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>測資只有一組。</li>
+	<li>程式架構範例如下，建議只修改標為 pass 的地方，否則若影響自動批改時，可能會有折扣：
+<pre class="brush: py">
+def buy_m_get_n_free(m, n, prices):
+	pass
+
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+	<li>為了檢驗各位對特定語法是否足夠熟悉，本題會將函式內程式碼的行數以及方括號的用量納入評分考量。請盡可能只使用一行，以及至多兩組方括號。</li>
+</ul>
+
+</body></html>

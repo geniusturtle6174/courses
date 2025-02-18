@@ -1,0 +1,85 @@
+﻿<html>
+<head>
+	<title>MATH172000--程式設計二</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		// input = prompt('Enter passwrd:')
+		// if(input!='0800092000'){
+		// 	document.removeChild(document.documentElement);
+		// }
+		SyntaxHighlighter.all();
+	</script>
+	<style>
+		span#d:before{
+			content: "不";
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			margin-right: 0px;
+		}
+	</style>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">Q1: Words of Fortune</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>檔名必須為「q1_你的學號.py」，例如 q1_9962816.py</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+<center><img src="pics/wof.jpg" height="350"></center><br>
+由於肉眼看字實在太麻煩了，但是讓各位辨識圖片中的字又有些困難，所以本題會以多行字串的方式，並且每行都是對齊的格式來提供資訊給你，請你撰寫一個函式 words_of_fortune，來檢查多行字串當中是否存在某特定單字。請注意，本題<span style="font-size: 0px;">不</span>允許看橫的（由左到右）和直的（由上到下），但是<span id="d">會</span>有斜的（由左上到右下）。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+第一個參數是一個多行字串，每行的內容只有大寫英文字母，每行的字母數相等，且不會有空行。第二個參數是一個單行字串，內容也只有大寫英文字母，是要尋找的目標單字。
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+若有找到目標單字，請回傳 True（即「return <span style="font-size: 0px;">"</span>True<span style="font-size: 0px;">"</span>」），否則請回傳 False（即「return <span style="font-size: 0px;">"</span>False<span style="font-size: 0px;">"</span>」）。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+參數一：<br>
+<span style="font-family:monospace;font-size:20px">
+SDRDHE<br>
+GOFEGN<br>
+WFLCUO<br>
+UHUHIK<br>
+TKNWYO<br>
+BKKCHK<br>
+NPWPIU<br></span>
+參數二：FLUNK<br>
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+<span style="font-size: 0px;">"</span>True<span style="font-size: 0px;">"</span>
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>測資只有一組。</li>
+	<li>程式架構範例如下，建議只修改標為 pass 的地方以及「if __name__ == '__main__':」區塊的內容，否則若影響自動批改時，可能會有折扣：
+<pre class="brush: py">
+def words_of_fortune(multi_line_str, target):
+	pass
+
+
+if __name__ == '__main__':
+	multi_line_str = """SDRDHE
+GOFEGN
+WFLCUO
+UHUHIK
+TKNWYO
+BKKCHK
+NPWPIU"""
+
+	print(words_of_fortune(multi_line_str, 'FLUNK'))
+</pre>
+	</li>
+</ul>
+
+</body></html>
