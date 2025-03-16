@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+	<title>MATH172000--程式設計二</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">課後練習 04</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+<ul>
+	<li>(100%，當週 demo)請回答在動態規劃教材的第一個範例中，若將 str_a 設為 '<span id="str_a"></span>'，以及 str_b 設為 '<span id="str_b"></span>' 時的 d 變數的全部內容。</li>
+	<li>(自我練習不計分)請解答此 LeetCode 問題：<a href="https://leetcode.com/problems/n-th-tribonacci-number">1137. N-th Tribonacci Number</a></li>
+	<li>(自我練習不計分)請解答此 LeetCode 問題：<a href="https://leetcode.com/problems/pascals-triangle">118. Pascal's Triangle</a></li>
+</ul>
+
+<script>
+
+str = 'ABCDEF';
+n = 5;
+
+document.getElementById('str_a').innerHTML = '';
+for(i=0;i<n;i++){
+	document.getElementById('str_a').innerHTML += str[Math.floor(Math.random()*str.length)];
+}
+
+document.getElementById('str_b').innerHTML = '';
+for(i=0;i<n;i++){
+	document.getElementById('str_b').innerHTML += str[Math.floor(Math.random()*str.length)];
+}
+</script>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>排隊請使用<a href="https://forms.gle/59qP9D6GwZwhUUD18">此連結</a>。</li>
+	<li>排隊第三次起，每次扣 5 分。</li>
+</ul>
+
+</body></html>
