@@ -1,0 +1,84 @@
+﻿<html>
+<head>
+	<title>MATH172000--程式設計二</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		// input = prompt('Enter passwrd:')
+		// if(input!='0800092000'){
+		// 	document.removeChild(document.documentElement);
+		// }
+		SyntaxHighlighter.all();
+	</script>
+	<style>
+		span#d:before{
+			content: "不";
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			margin-right: 0px;
+		}
+	</style>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">Q2: Dragons Swim in Four Seas</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>檔名必須為「q2_你的學號.py」，例如 q2_9962816.py</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+
+<center><img src="pics/dsif.jpg" height="250"></center><br>
+
+本題目會告訴你一間店內某兩樣商品（商品 A 和商品 B）的單價，以及基於此兩樣商品組合成的套餐們的價格，請你撰寫一個函式 get_best_price，回答當兩樣商品各買一些數量時，最便宜的買法需要多少錢。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+
+共有五個參數，依序說明如下：
+<ol>
+	<li>商品 A 單價，為正整數。</li>
+	<li>商品 B 單價，為正整數。</li>
+	<li>套餐組合，為一個串列，其中的每個元素代表一種套餐，都是長度為 3 的串列，第一個數字是該套餐中商品 A 的數量，第二個數字是該套餐中商品 B 的數量，第三個數字是該套餐的價格，皆為非負整數。</li>
+	<li>商品 A 購買數量，為非負整數。</li>
+	<li>商品 B 購買數量，為非負整數。</li>
+</ol>
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+一個整數，代表最便宜的買法需要多少錢。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+5, 30, [[10, 1, 70], [15, 2, 130], [4, 1, 45]], 20, 20<br>
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+675
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>測資有三組，每組 34 分，最高採計至 100 分。</li>
+	<li>填表方式提示
+		<ul>
+			<li>D<sub>i,j</sub> 為 A 商品只買 i 個和 B 商品只買 j 個時的最便宜買法的價錢。</li>
+			<li>令套餐數量為 k，則 D<sub>i,j</sub> 應在「完全不要組套餐」和「能組某一個套餐的話就組看看」之間，共 k + 1 種情況取最大值。</li>
+		</ul>
+	</li>
+	<li>程式架構範例如下，建議只修改標為 pass 的地方以及「if __name__ == '__main__':」區塊的內容，否則若影響自動批改時，可能會有折扣：
+<pre class="brush: py">
+def get_best_price(a_price, b_price, combos, a_num, b_num):
+	pass
+
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+</ul>
+
+</body></html>
