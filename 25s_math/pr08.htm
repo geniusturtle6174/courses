@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+	<title>MATH172000--程式設計二</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">課後練習 08</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+
+<ul>
+	<li>(70%)以下是一個將實驗重複五次的範例，請將 MLPClassifier 的參數內容進行修改，例如「hidden_layer_sizes=(32, 32)」，再跑另外五次，並將兩個五次的結果用 boxplot 繪製。
+<pre class="brush: py">
+import numpy as np
+from sklearn.datasets import load_digits
+from sklearn.model_selection import train_test_split
+from sklearn.neural_network import MLPClassifier
+ 
+dataset = load_digits()
+print('Data shapes:', dataset.data.shape, dataset.target.shape)
+
+for _ in range(5):
+	X_train, X_test, y_train, y_test = train_test_split(dataset.data, dataset.target)
+	model = MLPClassifier(hidden_layer_sizes=(256, 256))
+	model.fit(X_train, y_train)
+	pred = model.predict(X_test)
+	print('Accuracy: {:.2f}%'.format(100*np.mean(pred == y_test)))
+</pre>
+		<ul>
+			<li>除了實際數據的不同以外，你的圖片請盡可能的與此相似，愈相似則在 demo 時會被問的問題可能就會愈少：<br><img src="pics/pr08_example.png" height="300px"></li>
+			<li>你必須只使用一個 py 檔案完成此題目。</li>
+		</ul>
+	</li>
+	<li>(30%)請將 load_digits 更換為 load_wine，重複上一題的要求，並比較實驗結果是否有差異。</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>本週僅允許該範例有 import 的函式庫，以及 matplotlib。</li>
+	<li>完成後，請將第一題的 py 檔案，以及兩題的圖片，在 eeclass 專區以附件方式繳交。於課堂，教師將依繳交順序叫號 demo。</li>
+	<li>隔週 demo 者之折扣為八折。</li>
+</ul>
+
+</body></html>
