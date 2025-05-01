@@ -1,0 +1,103 @@
+﻿<html>
+<head>
+	<title>MATH171002--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">Final Project - Predict Calorie Expenditure</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+
+請參加此競賽：<a href="https://www.kaggle.com/competitions/playground-series-s5e5">Predict Calorie Expenditure (Playground Series - Season 5, Episode 5)</a>。
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>Deadline:
+		<ul>
+			<li>預測與程式：05/31 (六) 08:00</li>
+			<li>報告：06/07 (六) 08:00</li>
+		</ul>
+	</li>
+	<li>繳交方式: eeclass 作業上傳區，「預測成績與程式」和「報告」會分別開設繳交區，細節規定如下
+		<ul>
+			<li>預測成績：檔名應為 lb_result.txt，內容只有一行，為你在排行榜上所取得的最佳評估結果。</li>
+			<li>程式
+				<ul>
+					<li>只須執行一個 *.py 檔案時，該 *.py 檔案名稱須以 run_ 開頭，後面可且僅可接半形的小寫英文、底線或數字。</li>
+					<li>須執行超過一個 *.py 檔案時，這些 *.py 檔案名稱須依照執行順序，以 run1_、run2_、... 為開頭，且最多只能編號至 run4_。後面一樣可且僅可接半形的小寫英文、底線或數字。</li>
+					<li>若要撰寫被用來 import 的檔案，則檔名除了不能以 run 或長相類似的單字(num, rum, ...)開頭外，不受限制。</li>
+					<li>若有嘗試多種方法，應繳交你取得最佳結果的方法。</li>
+				</ul>
+			</li>
+			<li>報告：檔名為 report.txt 或 report.pdf。</li>
+			<li>前述之外的內容（包含但不限於競賽資料），不應在繳交之列。</li>
+		</ul>
+	</li>
+	<li>Demo 時間地點: 06/05 原上課時段於原教室，視情況使用 R6 或 Ra 時段。有可能只選 15 至 20 人來口頭回答問題，具體時段與名單預計最遲於當天 08:00 前公布，<b>各位有義務注意信箱</b>。</li>
+	<li>評分方式
+		<ul>
+			<li>預測準確度(30%)
+				<ul>
+					<li>依班級整體排名給予。</li>
+					<li>程式繳交項目不合規定，或者你交了多餘的東西時，除了成績抽驗結果的差距過大以外，折扣會算在這一項上面。</li>
+				</ul>
+			</li>
+			<li>Pylint (10%)：
+				<ul>
+					<li>評分指令待公布<!--每個 *.py 檔案的評分指令皆為「pylint --disable=... your_file.py」。評分結果以教師安裝的版本(3.3.0)為準-->。</li>
+					<li>每個 *.py 檔案的給分方式為 max(pylint-score, 0)，本項評分取所有檔案的最小值。</li>
+					<li>若在任一檔案的程式碼中，有試圖關閉或避開評分指令未列出的評比項目等行為時，本項不給分。</li>
+				</ul>
+			</li>
+			<li>報告(60%)：依教師主觀喜好排序給分，合於基本規定者只保障本項及格（即本項之 60%）。</li>
+		</ul>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">程式撰寫說明</p>
+
+<ul>
+	<li>請以右列項目請直接存放在同一個目錄下的狀況來撰寫程式：題目給定之 train.csv、題目給定之 test.csv、所有程式碼、程式產生的最後的 submission file。</li>
+	<li>程式的中間產物可以直接存放在同一個目錄下，亦可建立子資料夾存放，唯子資料夾應能由程式判斷是否需建立。</li>
+	<li>請盡可能避免使用隨機程度過大的模型來進行預測。前述「隨機程度過大」之參考標準，為你所宣稱的成績，跟教師抽驗結果的成績，其差距在全班預測成績的 1 個標準差以上，即 1 * np.std(whole_class_claimed_scores) 以上。</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">報告說明</p>
+
+<ul>
+	<li>以正體中文撰寫，並除專有名詞可使用英文外，盡可能使用台灣慣用詞語。若感到困難者，可全部使用英文。</li>
+	<li>可使用純文字格式繳交，或以文書處理或簡報等軟體製作後，再轉換為 pdf 繳交。
+		<ul>
+			<li>以純文字繳交者，編碼建議為 UTF-8。使用記事本時，可參照視窗右下角確認，若使用其他編輯軟體，請自行確認。</li>
+			<li>以 pdf 繳交者，應注意於原始軟體（如 word 或 power point）製作時，版面與字型大小適當。文書軟體建議將版面設定為 A4，簡報軟體建議設定為 16:9。</li>
+		</ul>
+	</li>
+	<li>你的報告必須能依序記載下列內容，或回答下列問題
+<pre style="border:1px solid">
+一、用你自己的話，介紹此題目在做的事情。
+
+二、用你自己的話，介紹此題目的資料集。
+
+三、介紹你達到最佳效果的模型輸入特徵。若有將不同欄位組合成新的欄位，亦請務必說明。
+
+四、介紹你達到最佳效果的模型方法。若有參考 Kaggle 或其他平台之討論區的作法，請務必標明。
+
+五、若有試過其他方法，請說明，並跟上一題的最佳方法進行比較與討論。
+
+六、若有其他來不及嘗試的點子，請說明。
+</pre>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>預測或程式未準時繳交者，本專案只給予報告分數，並且會打八折。</li>
+	<li>報告是否繳交不影響是否及格時，不接受遲交。</li>
+	<li>使用 AI 輔助完成者，有義務將相關對話紀錄保留，以供查閱。</li>
+	<li>本專案允許 import numpy、scikit-learn、xgboost、lightgbm，以及任何 Python 內建之函式庫。若有預計在報告內放入實驗結果的相關圖片，可 import matplotlib。注意：pandas、PyTorch、Tensorflow、seaborn 等函式庫不允許使用。若有其他需求者，請找教師討論。</li>
+</ul>
+
+</body></html>
