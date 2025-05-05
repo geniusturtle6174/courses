@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+	<title>MATH172000--程式設計二</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">課後練習 09</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+
+請把教材「基於樹的模型」的第二個範例的 make_moons 替換成 make_circles，並依序完成下列題目
+<ul>
+	<li>(10%)手動跑幾次，肉眼觀察大概的 test set accuracy 並回答。</li>
+	<li>(20%)修改模型超參數並手動再跑幾次，讓 test set accuracy 很有機會在 80% 以上。</li>
+	<li>(40%)把超參數復原，並加入點座標與原點的 2-norm 距離（或距離平方，亦即最後要不要開根號都可以），並再度修改模型超參數以及手動再跑幾次，重新讓 test set accuracy 很有機會在 80% 以上。
+		<ul>
+			<li>樹的數量和深度，請盡可能的比第二題所用的來的小。</li>
+		</ul>
+	</li>
+	<li>(30%)使用第二題調整出的超參數，畫出 training loss 以及 validation loss 的變化圖。
+		<ul>
+			<li>除了實際數據的不同以外，你的圖片請盡可能的與此相似，愈相似則在 demo 時會被問的問題可能就會愈少：<br><img src="pics/pr09_example.png" height="300px"></li>
+			<li>你必須只使用一個 py 檔案完成此題目。Training loss 以及 validation loss 必須用程式碼取得，禁止手動處理。不過用程式碼取得 loss 的語法不在教材範例中，你必須自行上網搜尋（提示：model.evals_result()）。</li>
+		</ul>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>本週僅允許該範例有 import 的函式庫，以及 matplotlib。</li>
+	<li>完成後，請將下列項目，依指定方式在 eeclass 專區繳交。於課堂，教師將依繳交順序叫號 demo。
+		<ul>
+			<li>文字輸入框回答：第一題的 test set accuracy、第二題的超參數、第三題的超參數。</li>
+			<li>附件繳交：第三題的程式碼、第四題的程式碼、第四題的圖片。</li>
+		</ul>
+	</li>
+	<li>只繳交部分項目時，會僅以繳交的項目評分。若繳交項目皆符合取得分數之條件（即未遭退回），視為你選擇本週只取得那些分數即可。</li>
+	<li>若看到你的繳交已被批改，就代表你已取得分數，若沒被叫到就可以不必來 demo。若不放心，可以在離開前向教師詢問。</li>
+	<li>隔週 demo 者之折扣為八折。</li>
+</ul>
+
+</body></html>
