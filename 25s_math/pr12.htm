@@ -1,0 +1,50 @@
+﻿<html>
+<head>
+	<title>MATH172000--程式設計二</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">課後練習 12</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+
+<ul>
+	<li>(100%)請將下列範例中，訓練資料的 sample 個數分別修改為 5000、10000、15000、20000、25000，並繪製 sample 個數與執行時間的關係圖。
+<pre class="brush: py">
+import numpy as np
+from sklearn.datasets import make_circles
+from sklearn.svm import SVC
+
+x_train, y_train = make_circles(n_samples=1000, shuffle=True, noise=0.1)
+
+model = SVC()
+model.fit(x_train, y_train)
+</pre>
+		<ul>
+			<li>除了實際數據的不同以外，你的圖片請盡可能的與此相似，愈相似則在 demo 時會被問的問題可能就會愈少：<br><img src="pics/pr12_example.png" height="300px"></li>
+			<li>你必須只使用一個 py 檔案完成此題目。</li>
+			<li>如果你的電腦在 25000 個 sample 的情況下會跑超過 10 秒，則可以適當的減少 sample 個數，以使其盡可能接近但又不會超過 10 秒，唯仍須使所有要測試的 sample 個數保持等差數列。</li>
+		</ul>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>本週僅允許使用該範例有 import 的函式庫，time 函式庫，以及 matplotlib。</li>
+	<li>完成後，請將程式與圖片，以附件方式在 eeclass 專區繳交。</li>
+	<li>若看到你的繳交已被批改，就代表你已取得分數。若教師認為有必要請你來說明，會另外通知你於 06/05 前來課堂。</li>
+	<li>本次練習不接受遲交。</li>
+</ul>
+
+</body></html>
