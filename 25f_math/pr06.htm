@@ -10,13 +10,13 @@
 <p style="background-color:#9f9;text-align:center;font-size:17pt">課後練習 06</p>
 
 <p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
-下列是 comprehension 相關的練習，每題 20 分。
+下列是 comprehension 相關的練習，總分 105 分。
 <ul>
-	<li>設有一不為空的串列 a，內容都是正整數，請以一行程式建立另一串列 b，使得 b<sub>i</sub> = a<sub>i</sub><sup>1/(i+1)</sup>。提示：enumerate。</li>
-	<li>設有一不為空的串列 a，內容都是正整數，請以一行程式建立另一串列 b，使得其內容為 a 當中 index 和值皆為奇數的值，例如 a = [9, <u>9</u>, 6, 2, 8, <u>1</u>, 6] 應回答 b 為 [9, 1]。提示：條件判斷、enumerate。</li>
-	<li>設有長度相等的兩串列 a、b，內容都是數字，請以一行程式建立另一個串列 c，使得 i 為非負偶數（含 0）時的 c<sub>i</sub> 為 a<sub>i</sub> 與 b<sub>i</sub> 的較大的值，其餘位置為 a<sub>i</sub> 與 b<sub>i</sub> 中較小的值。提示：條件判斷、zip、enumerate。</li>
-	<li>請回答特定兩段程式碼產生的內容（程式碼請至 eeclass 繳交區觀看）。</li>
-	<li>請將前一題兩段程式碼，分別都轉換回沒有 comprehension 的傳統迴圈寫法。請留意，你的轉換結果必須要能跟前一題的程式碼直接對照，亦即應恰好有兩個 for 迴圈，且「for ...)」的部份必須相同。</li>
+	<li>(15%)設有一不為空的串列 a，內容都是正整數，請以一行程式建立另一串列 b，使得 b<sub>i</sub> = a<sub>i</sub><sup>1/(i+1)</sup>。提示：「b = [... for ... in enumerate(...)]」。</li>
+	<li>(20%)設有一不為空的串列 a，內容都是正整數，請以一行程式建立另一串列 b，使得其內容為 a 當中 index 和值皆為奇數的值，例如 a = [9, <u>9</u>, 6, 2, 8, <u>1</u>, 6] 應回答 b 為 [9, 1]。提示：「b = [... for ... in enumerate(...) if ...]」。</li>
+	<li>(25%)設有長度相等的兩串列 a、b，內容都是數字，請以一行程式建立另一個串列 c，使得 i 為非負偶數（含 0）時的 c<sub>i</sub> 為 a<sub>i</sub> 與 b<sub>i</sub> 的較大的值，其餘位置為 a<sub>i</sub> 與 b<sub>i</sub> 中較小的值。提示：「b = [... for ... in enumerate(zip(...))]」。</li>
+	<li>(20%)請回答特定兩段程式碼產生的內容（程式碼請至 eeclass 繳交區觀看）。</li>
+	<li>(25%)請將前一題兩段程式碼，分別都轉換回沒有 comprehension 的傳統迴圈寫法。請留意，你的轉換結果必須要盡可能的跟前一題的程式碼能直接對照。</li>
 </ul>
 
 <p style="background-color:#f99;font-size:17pt">注意事項</p>
