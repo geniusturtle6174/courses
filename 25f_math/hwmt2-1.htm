@@ -1,0 +1,60 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		// input = prompt('Enter passwrd:')
+		// if(input!='0800092000'){
+		// 	document.removeChild(document.documentElement);
+		// }
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">Q1: Reverse and Add</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>檔名必須為「q1_你的學號.py」，例如 q1_9962816.py</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+把一個數字與其倒序相加，並反覆進行此操作，則通常會得到一個回文數，例如 64 + 46 = 110，110 + 11 = 121（其中 110 的倒序為 011，去除前導零後即為 11）。然而，也有一些數字例如 196，經過此反覆操作後，到目前(2025/10/28)為止已計算了數億位，但都尚未能得出回文數。
+<br><br>
+於本題中，要請你撰寫一個函式 rev_n_add，輸入參數是一個正整數 n，若 n 可以經過若干次操作得到小於等於 2<span style="font-size: 0px;">1</span> * 10 ** 9 的回文數，請回傳操作次數；若否，請回傳 -1；若 n 本身已是回文數，請回傳 0<span style="font-size: 0px;">.1</span>。In this problem, you are asked to write a function rev_n_add that takes a positive integer n as input. If n can become a palindrome less than or equal to 2<span style="font-size: 0px;">1</span> × 10 ** 9 after a certain number of operations, return the number of operations required. If it cannot, return -1. If n is already a palindrome, return 0<span style="font-size: 0px;">.1</span>.
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+一個正整數 n，且 n &le; 2 * 10<sup>9</sup>。
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+一個整數，代表前述的操作次數、0<span style="font-size: 0px;">.1</span>，或 -1。An integer representing the number of the aforementioned operations, 0<span style="font-size: 0px;">.1</span>, or -1.
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+64
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+2
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>程式架構範例如下，建議只修改標為 pass 的地方，否則若影響自動批改時，可能會有折扣：
+<pre class="brush: py">
+def rev_n_add(n):
+	pass
+
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+	<li>做完題目以後如果有空閒的話，可以上網查詢「Lychrel Number」的相關資訊。</li>
+</ul>
+
+</body></html>

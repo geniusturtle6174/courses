@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">課後練習 09</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+答一題得 60 分，答兩題得 100 分，bonus 另計，即最高可至 105 分。
+<ul>
+	<li>Julia set。考慮算式 z<sub>n</sub> = z<sub>n-1</sub><sup>2</sup> + c，其中 c 為一複數常數，而 z<sub>0</sub> 為複數平面上一點，Julia set 為使 z<sub>n</sub> 不發散的所有 z<sub>0</sub> 的集合。請選定一個 c 值，並將其中所有可讓 z<sub>n</sub> 不會發散的 z<sub>0</sub> 畫出來。提示：
+		<ul>
+			<li>z<sub>0</sub> 的實軸和虛軸都建議在 [-2, 2] 之間取點，例如 np.linspace(-2, 2, 501)</li>
+			<li>可以只算到 n = 50 或 100（即 z<sub>50</sub> 或 z<sub>100</sub>），若其中任何一個 |z<sub>i</sub>| &gt; 2 則視為會發散，反之則視為不發散。</li>
+			<li>可以參考「complex」模組，以在程式中進行複數的建立與運算。</li>
+			<li>不同的 c 值會產生截然不同的 Julia set 圖案，建議嘗試多個 c 值觀察差異。一些可能會有趣的 c 值包括：
+				<ul>
+					<li>-0.7 + 0.27i</li>
+					<li>-0.4 + 0.6i</li>
+					<li>0.285 + 0.01i</li>
+					<li>-0.8 + 0.156i</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>Restricted chaos game。請依照下列步驟畫圖：
+		<ol>
+			<li>繪製一個正方形（可以只畫四個點）。</li>
+			<li>自正方形內自己隨意指定一點並繪出。</li>
+			<li>自正方形四個頂點中，隨機選取一個。但請注意：第 i 次選取的點，不能是第 i - 1 次選取的點的逆時針方向的下一個。
+				<ul>
+					<li>(5% bonus)你的程式要能快速的改為「第 i 次選取的點，不能是第 i - 1 次選取的點的順時針方向的下一個」、「第 i 次選取的點，不能是第 i - 1 次選取的點的對面那一個」，或者「第 i 次選取的點，不能是第 i - 1 次選取的點」</li>
+				</ul>
+			</li>
+			<li>將前兩步的兩個點取中點。</li>
+			<li>以第四步算出的中點，帶入第二步。</li>
+			<li>重複步驟二到五，建議至少五千次。</li>
+		</ol>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>本練習請於時限內至 eeclass 專區「課後練習 09 繳交區」，將程式碼以「在文字輸入框填入文字」的方式繳交，教師或助教將依 eeclass 繳交順序叫號。</li>
+	<li>本練習須於當週或隔週 demo；唯洽有一題隔週 demo 者，含 bonus 最高採計至 85；兩題皆隔週 demo 者，含 bonus 最高採計至 65。隔週 demo 之繳交區，將於有需要時另外開設。</li>
+	<li>本週題目允許使用 numpy、matplotlib，和內建之 random 模組。</li>
+</ul>
+
+</body></html>
