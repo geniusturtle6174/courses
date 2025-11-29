@@ -1,0 +1,70 @@
+﻿<html>
+<head>
+	<title>MATH171001--程式設計一</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">課後練習 12</p>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述與分數比率</p>
+<ul>
+	<li>(50%)請參照下列說明，觀察 Buffon's needle problem 中，針的數量對 &pi; 估計值的影響：
+		<ul>
+			<li>設定不同的針的數目，例如 50、500、1000 根針，並各自作數次（例如 200 次）實驗。針的長度及平面的範圍，可參照前一次隨堂練習，例如針的長度為 0.5，且其中一端的 x 和 y 座標皆在 [0, 10) 之內。</li>
+			<li>用 plt.hist 的方式，繪製當針的數量不同時，&pi; 估計值的分布。你的繪製結果除了實際數字以外，應該盡可能的跟下列圖片相近：<br><img src="pics/pr12.png" height="400px"></li>
+			<li>plt.hist 的 bins 參數可自由設定，上圖採用的是「np.linspace(0.5*np.pi, 1.5*np.pi, 21)」。</li>
+			<li>讓多張 histrogram 重疊時變成半透明的參數，請自行上網取得。</li>
+		</ul>
+	</li>
+	<li>(50%)請使用 requests 與 beautifulsoup4，並參照下列說明爬取本課程的課程網頁
+		<ul>
+			<li>將「課程進度表」的每周授課內容存成一個串列，使得串列的 index i 是 week i 的授課內容。部分內容如下：
+<pre class="brush: py">
+[
+	'',
+	'\n課程簡介\n開發環境介紹；輸入、輸出、數值運算；條件判斷\n',
+	'\n條件判斷；數學函式庫；自訂函式\n',
+	'\n自訂函式；串列（基本介紹）；LeetCode 注意事項整理\n'
+]
+</pre>
+			</li>
+			<li>你必須使用以下範例來修改，並只修改「pass」的部份：
+<pre class="brush: py">
+import requests
+from bs4 import BeautifulSoup
+ 
+response = requests.get('https://geniusturtle6174.github.io/courses/25f_math/')
+soup = BeautifulSoup(response.text, 'html.parser')
+ 
+table_of_content = pass
+result = ['']
+for row in pass:
+    result.append(pass)
+  
+# Display
+print(result)
+</pre>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">注意事項</p>
+
+<ul>
+	<li>本練習至少有一題須於當週 demo，請於時限內至 eeclass 專區「課後練習 12 繳交區」，將程式碼以「在文字輸入框填入文字」的方式繳交，教師或助教將依 eeclass 繳交順序叫號。</li>
+	<li>隔週繳交之相關訊息，於有需要時另外公告。兩題皆隔週 demo 者打九折。</li>
+	<li>本週題目允許使用 beautifulsoup4、numpy、matplotlib、requests，和內建之 math、random 模組。</li>
+</ul>
+
+</body></html>
