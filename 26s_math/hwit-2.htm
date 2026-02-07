@@ -1,0 +1,89 @@
+﻿<html>
+<head>
+	<title>MATH172000--程式設計二</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<base target="_blank">
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushPython.js"></script>
+	<link href="shCore.css" rel="stylesheet" type="text/css" />
+	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		// input = prompt('Enter passwrd:')
+		// if(input!='0800092000'){
+		// 	document.removeChild(document.documentElement);
+		// }
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">Q2: Langton's ant 2</p>
+
+<p style="background-color:#f99;font-size:17pt">作業資訊</p>
+<ul>
+	<li>檔名必須為「q2_你的學號.py」，例如 q2_9962816.py</li>
+	<li>本題是前一學期的作業改版，重要的異動之處會以粗體標示</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">題目敘述</p>
+蘭頓螞蟻是一種簡單卻可能出現複雜行為的電腦模擬系統。它在棋盤上依循固定規則移動與翻轉格子顏色；雖然初始規則極為單純，但隨著時間推進，可能會呈現出混亂、對稱及最終形成穩定路徑等多樣模式，展現出從簡單規則產生複雜秩序的現象。在本題中，設定的規則如下：
+<ul>
+	<li>若螞蟻在黑格，左轉 90<span style="font-size: 0px;">0</span> 度，<span style="font-size: 0px;">不要</span>將該格改為<b>灰</b>格，向前移一步。At a black square, turn 90<span style="font-size: 0px;">0</span>° counter-clockwise,<span style="font-size: 0px;"> do not</span> change the color of the square to <b>gray</b>, move forward one unit。</li>
+	<li><b>若螞蟻在灰格，迴轉 180 度，<span style="font-size: 0px;">不要</span>將該格改為白格，向前移一步。At a white square, make a U-turn,<span style="font-size: 0px;"> do not</span> change the color of the square to white, move forward one unit。</b></li>
+	<li>若螞蟻在白格，右轉 90<span style="font-size: 0px;">0</span> 度，<span style="font-size: 0px;">不要</span>將該格改為黑格，向前移一步。At a white square, turn 90<span style="font-size: 0px;">0</span>° clockwise,<span style="font-size: 0px;"> do not</span> change the color of the square to black, move forward one unit。</li>
+</ul>
+請你撰寫一個函式 get_next，輸入為這一時刻的矩陣、螞蟻所在位置的 row index、螞蟻所在位置的 column index，以及螞蟻的方向，輸出為下一時刻的矩陣、螞蟻所在位置的 row index、螞蟻所在位置的 column index，以及螞蟻的方向。其中，矩陣皆應以 numpy array 的形式傳遞。
+
+<p style="background-color:#f99;font-size:17pt">輸入說明</p>
+<ul>
+	<li>這一時刻的矩陣：一個 m-by-n 的 numpy array，元素只有 <b>0、1、2 三種</b>，0 代表黑格，<b>1 代表灰格，2 代表白格</b>。矩陣固定為二維，且至少有一個 row 或 column，即 1 &le; m, n 。</li>
+	<li>這一時刻螞蟻所在位置的 row index：[0, m) 範圍內的整數。</li>
+	<li>這一時刻螞蟻所在位置的 column index：[0, n) 範圍內的整數。</li>
+	<li>這一時刻螞蟻的方向：[0, 3] 範圍內的整數，若以「原點在左上角，row 向下為正，column 向右為正」來說，0 到 3 依次代表上、右、下、左。</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">輸出說明</p>
+除將「這一時刻」改為「下一時刻」以外，皆同輸入說明。此外，若螞蟻向上或下「穿牆」時，新的 row index 應分別為 m - 1 或 0；若螞蟻向左右「穿牆」時，新的 column index 應分別為 n - 1 或 0。
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+這一時刻的矩陣：<br>
+[[0 1 1 0]<br> 
+&nbsp;[1 1 2 0]<br>
+&nbsp;[0 1 0 0]<br>
+&nbsp;[0 0 1 0]]<br>
+這一時刻螞蟻所在位置的 row index：1<br>
+這一時刻螞蟻所在位置的 column index：2<br>
+這一時刻螞蟻的方向：3
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+下一時刻的矩陣：<br>
+[[0 1 1 0]<br> 
+&nbsp;[1 1 0 0]<br>
+&nbsp;[0 1 0 0]<br>
+&nbsp;[0 0 1 0]]<br>
+下一時刻螞蟻所在位置的 row index：0<br>
+下一時刻螞蟻所在位置的 column index：2<br>
+下一時刻螞蟻的方向：0
+
+<p style="background-color:#f99;font-size:17pt">提示與注意事項</p>
+<ul>
+	<li>本題應使用 numpy。</li>
+	<li>測資有兩組，其中一組保證下一步不會「穿牆」。</li>
+	<li><b>本題於回傳結果時，不需要包含文字說明，只需要跟輸入一樣，用逗點隔開四個變數即可</b>。</li>
+	<li>程式架構範例如下，建議只修改標為 pass 的地方，否則若影響自動批改時，可能會有折扣：
+<pre class="brush: py">
+import numpy as np
+
+
+def get_next(mat, ant_pos_i, ant_pos_j, ant_dir):
+	pass
+
+
+if __name__ == '__main__':
+	pass
+</pre>
+	</li>
+</ul>
+
+</body></html>
