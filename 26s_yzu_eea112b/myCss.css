@@ -1,0 +1,35 @@
+body{margin:20px 30px 20px 30px;}
+
+a{text-decoration:none;color:blue}
+a:hover{text-decoration:none;color:red}
+.myTitle{font-size:17pt;font-family:"標楷體","DFKai-sb"}
+ol, ul, li{font-size:12pt;font-family:"新細明體";margin-top:0px;margin-bottom:0px;}
+td.slide ul{padding-left:20px;}
+
+.small{font-size:1pt}
+
+
+
+table{border:0;border-collapse:collapse;}
+th{border-bottom:double;background-color:#ff9;}
+th.slide{border:solid 1px;padding:4px;}
+tr.slide{border:solid 1px;background-color:#eff;}
+td.slide{border:solid 1px;background-color:#eff;padding:4px;}
+
+.otherInfo{width:85%;}
+.thLeft{border-color:#000;border-right:ridge;border-bottom:ridge;background-color:#cfc;}
+.thRight{border-color:#000;border-bottom:ridge;background-color:#cfc;}
+.tdLeft{border-color:#000;border-right:ridge;border-bottom:ridge;background-color:#fcf;text-align:center;}
+.tdMid{border-color:#000;border-bottom:ridge;border-right:ridge;background-color:#fcf;padding:5pt;}
+.tdRight{border-color:#000;border-bottom:ridge;background-color:#fcf;padding:2pt}
+.thLeft{width:12%;}
+.tdMid{width:65%;}
+@media (max-width: 1300px){
+	.otherInfo{width:970px;}
+	.thLeft, .tdLeft{width:137px;}
+	.tdMid{width:720px;}
+	.tdRight{width:288px;}
+}
+
+
+blockquote{width:90%;position:absolute;top:0;}
