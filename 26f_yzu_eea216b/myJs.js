@@ -6,22 +6,38 @@
 	document.write(arguments[arguments.length-1]);
 }
 
-function Gol_D_Roger(){
-	document.write("<p>");
-	if(arguments[0]=="-1"){
-	
+document.addEventListener('DOMContentLoaded', function() {
+	const LASER_KEYWORD = 'laser';
+	let buffer = '';
+
+	function activateLaser() {
+		document.body.classList.add('laser-active');
+		buffer = '';
 	}
-	else {
-		document.write("若有使用張智星教授的 \
-			「<a href=\"http://books.gotop.com.tw/v_AEL011900\">JavaScript程式設計與應用</a>」一書，\
-			本篇對應的書中章節是 ");
-		document.write(arguments[0]);
-		for(var i=1;i<arguments.length-1;i++){
-			document.write("、"+arguments[i]);
-		}
-		if(arguments.length>1){
-			document.write("，以及" + arguments[arguments.length-1]);
-		}
+
+	function deactivateLaser() {
+		document.body.classList.remove('laser-active');
+		buffer = '';
 	}
-	document.write("。</p>");
-}
+
+	document.addEventListener('keydown', function(e) {
+		if (e.key === 'Escape') {
+			deactivateLaser();
+		return;
+		}
+
+		// 只接受單一字元的按鍵
+		if (e.key.length !== 1) return;
+
+		buffer += e.key.toLowerCase();
+
+		// buffer 只保留最後 N 個字元（N = keyword 長度）
+		if (buffer.length > LASER_KEYWORD.length) {
+			buffer = buffer.slice(-LASER_KEYWORD.length);
+		}
+
+		if (buffer === LASER_KEYWORD) {
+			activateLaser();
+		}
+	});
+});
