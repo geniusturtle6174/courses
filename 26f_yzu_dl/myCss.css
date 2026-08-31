@@ -42,7 +42,6 @@ ul.announcement a:hover{
 a{text-decoration:none;color:blue}
 a:hover{text-decoration:none;color:red}
 .myTitle{font-size:17pt;font-family:"DFKai-sb"}
-ol, ul, li{font-size:12pt;margin-top:0px;margin-bottom:0px;}
 td.slide ul{padding-left:20px;}
 
 .small{font-size:1pt}
