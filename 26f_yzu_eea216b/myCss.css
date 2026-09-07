@@ -17,11 +17,14 @@ a{text-decoration:none;color:blue}
 a:hover{text-decoration:none;color:red}
 .myTitle{font-size:17pt;font-family:"DFKai-sb"}
 ul.announcement{
+	position: sticky;
+	top: 0;
 	background: #222;
 	color: #fb7;
 	padding: 5px;
 	width: 85%;
 	list-style: none;
+	box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.4);
 }
 ul.announcement a{
 	color: #ffb;
