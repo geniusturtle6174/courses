@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const HOLD_KEY = 'c';
-  const HOLD_DURATION = 1000;
+  const HOLD_DURATION = 100;
   let holdTimer = null;
 
   function activateCh() {

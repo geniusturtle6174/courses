@@ -14,23 +14,26 @@ body.laser-active {
 }
 
 .lang-ch {
-  display: none;
+	display: none;
 }
 
 body.lang-ch-active .lang-ch {
-  display: revert; /* 恢復該元素本來的預設 display 值 */
+	display: revert; /* 恢復該元素本來的預設 display 值 */
 }
 
 body.lang-ch-active .lang-en {
-  display: none;
+	display: none;
 }
 
 ul.announcement{
+	position: sticky;
+	top: 0;
 	background: #222;
 	color: #fb7;
 	padding: 5px;
 	width: 85%;
 	list-style: none;
+	box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.4);
 }
 ul.announcement a{
 	color: #ffb;
