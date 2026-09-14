@@ -12,19 +12,24 @@
 
 <p style="background-color:#f99;font-size:17pt">Basic Info</p>
 <ul>
-	<li>Deadline: 09/21 (Mon.) 08:00</li>
+	<li>Deadline: 09/21 (Mon.) 13:00</li>
 	<li>How to submit: Upload to portal. File name must be "hw01_your_student_ID.py". Example: hw01_9962816.py</li>
 	<li>Demo time/place: 09/22 (Tue.), same class time, same room</li>
-	<li>Speed Score: 5 points. Score depends on your rank in class. No score for late submission. You must pass all points of the special test data to get this score.</li>
-	<li>Grading: (Correctness + Speed Score) * Demo / 100</li>
+	<li class="lang-ch">Speed Score: 5 分，依據班級整體排名給分。遲交者不給分。特別測資全數答對才會給分。</li>
+	<li class="lang-en">Speed Score: 5 points. Score depends on your rank in class. No score for late submission. You must pass all of the special test cases to get this score.</li>
+	<li >Grading: (Correctness + Speed Score) * Demo / 100</li>
 </ul>
 
 <p style="background-color:#f99;font-size:17pt">Problem Desc</p>
-This problem is modified from LeetCode <a href="https://leetcode.com/problems/two-sum/">1. Two Sum</a>. The differences from the original LeetCode problem are listed below. For other details, please follow the original problem:
+<p class="lang-ch">本題自 LeetCode 的 <a href="https://leetcode.com/problems/two-sum/">1. Two Sum</a> 修改而來。與 LeetCode 原版題目不同之處如下（其餘細節請遵循原版題目）：</p>
+<p class="lang-en">This problem is modified from LeetCode <a href="https://leetcode.com/problems/two-sum/">1. Two Sum</a>. The differences from the original LeetCode problem are listed below. For other details, please follow the original problem:</p>
 <ol>
-	<li>When there is exactly one solution, return a list with the indices of the two elements. The smaller index should come first in the returned list. For example, if the list is [1, 2, 3, 4] and the target is 7, you should return [2, 3], not [3, 2].</li>
-	<li>When there are multiple solutions, try to use the smaller index first. For example, if the list is [1, 2, 3, 4] and the target is 5, you should return [0, 3], not [1, 2]. Also, if the list is [3, 3, 3, 3] and the target is 6, you should return [0, 1], not anything else.</li>
-	<li>When there is no solution, return [-1, -1].</li>
+	<li class="lang-ch">恰有一組解時，請回傳一個串列，內容為那兩個元素的索引值，其中索引值較小者，其索引值應出現在回傳串列的前面。例如串列為 [1, 2, 3, 4] 而目標值為 7 時，應回傳 [2, 3] 而非 [3, 2]。</li>
+	<li class="lang-en">When there is exactly one solution, return a list with the indices of the two elements. The smaller index should come first in the returned list. For example, if the list is [1, 2, 3, 4] and the target is 7, you should return [2, 3], not [3, 2].</li>
+	<li class="lang-ch">存在多組解時，索引值小的要盡量先使用。例如串列為 [1, 2, 3, 4] 而目標值為 5 時，應回傳 [0, 3] 而非 [1, 2]。又，串列為 [3, 3, 3, 3] 而目標值為 6 的時候，應回傳 [0, 1] 而非其他任何內容。</li>
+	<li class="lang-en">When there are multiple solutions, try to use the smaller index first. For example, if the list is [1, 2, 3, 4] and the target is 5, you should return [0, 3], not [1, 2]. Also, if the list is [3, 3, 3, 3] and the target is 6, you should return [0, 1], not anything else.</li>
+	<li class="lang-ch">不存在解時，請回傳 [-1, -1]。</li>
+	<li class="lang-en">When there is no solution, return [-1, -1].</li>
 </ol>
 
 <p style="background-color:#f99;font-size:17pt">Input Desc</p>
@@ -41,21 +46,32 @@ See above, please refer to the problem description.
 
 <p style="background-color:#f99;font-size:17pt">Hints and Notes</p>
 <ul>
-	<li>You can first get an AC on LeetCode, then change your code to meet the requirements of this problem.</li>
-	<li>There are 6 groups of test data. Each group has many test cases. You get points only if all cases in a group are correct. Details are below
+	<li class="lang-ch">你可以先取得 LeetCode 的 AC，再來修改程式以符合本題目之要求。</li>
+	<li class="lang-en">You can first get an AC on LeetCode, then change your code to meet the requirements of this problem.</li>
+	<li>
+		<span class="lang-ch">測資共有六組，每組包含多筆測資，每組測資全對給分，其餘細節如下：</span>
+		<span class="lang-en">There are 6 groups of test cases. Each group has many test cases. You get points only if all cases in a group are correct. Details are below:</span>
 		<ul>
-			<li>Groups 1 to 4 each have exactly one solution. Group 5 does not guarantee any specific number of solutions. Each of these 5 groups is worth 19 points. Every test case follows the length limit of the original problem.</li>
-			<li>Group 6 is used for the Speed Score. Every test case in this group has a solution. The length may not follow the limit of the original problem.</li>
+			<li class="lang-ch">第一到四組恰有一解。第五組不保證解的數目。這五組每組 19 分，每筆的長度限制與 LeetCode 原版題目相同。</li>
+			<li class="lang-en">Groups 1 to 4 each have exactly one solution. Group 5 does not guarantee any specific number of solutions. Each of these 5 groups is worth 19 points. Every test case follows the length limit of the original problem.</li>
+			<li class="lang-ch">第六組測資為 Speed Score 評分用，其中的每筆測資都洽有一解，惟其長度不受 LeetCode 原版題目之限制</li>
+			<li class="lang-en">Group 6 is used for the Speed Score. Every test case in this group has exactly one solution. The length does not follow the limit of the original problem.</li>
+			<li class="lang-ch">部分測資可能會事先公布，請參照 portal。</li>
+			<li class="lang-en">Some test cases may be released in advance. Please refer to the portal.</li>
 		</ul>
 	</li>
 	<li>In the code you submit,
 		<ul>
-			<li>It must include "class Solution" and everything inside it.</li>
-			<li>The only things allowed at the top level (no indent) are "class Solution", "if __name__ == '__main__':", and your own custom function(s).</li>
-			<li>Do not put any print statements inside "class Solution" or your own custom function(s).</li>
+			<li class="lang-ch">必須包含「class Solution」及其之內的任何內容，並請勿修改 LeetCode 原始題目指定的 class 及函式名稱。</li>
+			<li class="lang-en">It must include "class Solution" and everything inside it, and do not modify the class or function names specified by the original LeetCode problem.</li>
+			<li class="lang-ch">能靠在最左方不縮排的內容，只有「class Solution」、「if __name__ == '__main__':」，以及你自己撰寫的函式。</li>
+			<li class="lang-en">The only things allowed at the top level (no indent) are "class Solution", "if __name__ == '__main__':", and your own custom function(s).</li>
+			<li class="lang-ch">除了在「if __name__ == '__main__':」之中以外，不要有任何等待使用者輸入、螢幕輸出、讀寫檔案等行為。</li>
+			<li class="lang-en">Do not perform any user input, screen output, or file read/write operations outside of "if __name__ == '__main__':".</li>
 		</ul>
 	</li>
-	<li>Demo example question: Given one test case, show all or part of the content of some variable at some point in the code.</li>
+	<li class="lang-ch">Demo 範例問題：給定一組測資，回答某些變數在程式某些地方的全部或部分內容。</li>
+	<li class="lang-en">Demo example question: Given one test case, show all or part of the content of some variable at some point in the code.</li>
 </ul>
 
 </body></html>

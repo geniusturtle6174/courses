@@ -41,3 +41,30 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	});
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const HOLD_KEY = 'c';
+  const HOLD_DURATION = 100;
+  let holdTimer = null;
+
+  function activateCh() {
+    document.body.classList.add('lang-ch-active');
+  }
+
+  function deactivateCh() {
+    document.body.classList.remove('lang-ch-active');
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key !== HOLD_KEY || e.repeat) return;
+    holdTimer = setTimeout(() => {
+      activateCh();
+    }, HOLD_DURATION);
+  });
+
+  document.addEventListener('keyup', function(e) {
+    if (e.key !== HOLD_KEY) return;
+    clearTimeout(holdTimer);
+    deactivateCh();
+  });
+});
