@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.remove('lang-ch-active');
   }
 
+  // 如果網址有 ch 參數，預設顯示中文
+  const params = new URLSearchParams(window.location.search);
+  if (params.has('ch')) {
+    activateCh();
+  }
+
   document.addEventListener('keydown', function(e) {
     if (e.key !== HOLD_KEY || e.repeat) return;
     holdTimer = setTimeout(() => {
