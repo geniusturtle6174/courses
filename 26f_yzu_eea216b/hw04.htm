@@ -1,0 +1,85 @@
+﻿<html>
+<head>
+	<title>EEA216B--Data Structure</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<script type="text/javascript" src="myJs.js"></script>
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">HW04: Line Management</p>
+
+<p style="background-color:#f99;font-size:17pt">Basic Info</p>
+<ul>
+	<li>Deadline: 11/16 (Mon.) 13:00</li>
+	<li>How to submit: Upload to portal. File name must be "hw04_your_student_ID.py". Example: hw04_9962816.py</li>
+	<li>Demo time/place: 11/17 (Tue.), same class time, same room</li>
+	<li>Grading: Correctness * Demo / 100</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">Problem Desc</p>
+<p class="lang-ch">學校正在舉辦⼀場⼤型活動，共有 n 位學⽣參加，學⽣編號為 1 到 n。活動開始時，所有學⽣按照編號由⼩到⼤排成⼀列，即 1, 2, 3, ..., n；而活動進⾏期間，老師會不斷調整學⽣的排列順序，調整的方式有以下兩種：</p>
+<p class="lang-en">The school is holding a large event with n students, numbered 1 to n. At the start, all students line up in order of their numbers from smallest to largest, i.e. 1, 2, 3, ..., n. During the event, the teacher keeps rearranging the students in one of the following two ways:</p>
+<ul>
+	<li class="lang-ch">move x y：將編號為 x 的同學，移動到編號為 y 的同學的後面。若 x 和 y 當中有任一人不在隊伍中，則忽略此動作。</li>
+	<li class="lang-en">move x y: Move student x to right behind student y. If either x or y is not in the line, ignore this operation.</li>
+	<li class="lang-ch">remove x：將編號為 x 的同學移出隊伍。若 x 不在隊伍中，則忽略此動作。</li>
+	<li class="lang-en">remove x: Remove student x from the line. If x is not in the line, ignore this operation.</li>
+</ul>
+
+<p class="lang-ch">請撰寫一個函式 line_management，輸入是一開始的同學人數 n 和調整內容 ops，輸出將所有調整依序執行完畢以後，指向隊伍開頭同學的節點指標。</p>
+<p class="lang-en">Please write a function line_management. The input is the initial number of students n and the list of adjustments ops. The output is the node pointer pointing to the student at the front of the line after all adjustments have been executed in order.</p>
+
+<p style="background-color:#f99;font-size:17pt">Input Desc</p>
+<ul>
+	<li>n (number of people): positive integer.</li>
+	<li>
+		<span class="lang-ch">調整內容 ops：list of tuples，每個 tuple 為以下其中一種：</span>
+		<span class="lang-en">Adjustments ops: a list of tuples. Each tuple is one of the following:</span>
+		<ul>
+			<li>("move", x, y): x and y are positive integers.</li>
+			<li>("remove", x): x is positive integer.</li>
+		</ul>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">Output Desc</p>
+<p class="lang-ch">將隊伍中的每位同學，依序用 linked list 連接起來，並回傳指向隊伍開頭同學的節點指標，若隊伍已無人請回傳 None。每個節點應至少包含下列屬性：</p>
+<p class="lang-en">Link every student in the line in order using a linked list, and return the node pointer pointing to the student at the front of the line. If no one is left in the line, return None. Each node should have at least the following attributes:</p>
+<ul>
+	<li class="lang-ch">val：同學的編號。</li>
+	<li class="lang-en">val: The student's number.</li>
+	<li class="lang-ch">next：指向代表下一位同學的節點指標。隊伍尾端的同學，此指標應指向 None。</li>
+	<li class="lang-en">next: The pointer to the node of the next student. For the student at the end of the line, this pointer should point to None.</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+<p>n = 10, ops = [('move', 3, 5), ('remove', 4), ('move', 2, 10), ('remove', 1)]</p>
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+<p>5, 3, 6, 7, 8, 9, 10, 2</p>
+
+<p style="background-color:#f99;font-size:17pt">Hints and Notes</p>
+
+<ul>
+	<li class="lang-ch">測資包含多筆，每無法解出一筆扣 20 分，扣至本作業 0 分為止。</li>
+	<li class="lang-en">There are multiple test cases. 20 points will be deducted for each unsolved test case, down to a minimum of 0 points for this assignment.</li>
+	<li class="lang-ch">如果你的方法的整體時間複雜度不是線性的，則有可能無法取得滿分。</li>
+	<li class="lang-en">If the overall time complexity of your method is not linear, you may not be able to get full points.</li>
+	<li class="lang-en"></li>
+	<li>In the code you submit,
+		<ul>
+			<li class="lang-ch">必須包含「def line_management」及其之內的任何內容，並能透過呼叫該 function 來解題。</li>
+			<li class="lang-en">It must include "def line_management" and everything inside it, and the problem must be solvable by calling that function.</li>
+			<li class="lang-ch">能靠在最左方不縮排的內容，只有「def line_management」、「if __name__ == '__main__':」，以及你自己撰寫的類別或函式。</li>
+			<li class="lang-en">The only things allowed at the top level (no indent) are "def line_management", "if __name__ == '__main__':", and your own custom class(es) or function(s).</li>
+			<li class="lang-ch">除了在「if __name__ == '__main__':」之中以外，不要有任何等待使用者輸入、螢幕輸出、讀寫檔案等行為。</li>
+			<li class="lang-en">Do not perform any user input, screen output, or file read/write operations outside of "if __name__ == '__main__':".</li>
+		</ul>
+	</li>
+	<li class="lang-ch">Demo 範例問題：給定一組測資，以及對程式做部分修改，回答回傳內容。</li>
+	<li class="lang-en">Demo example question: Given one test case and some modifications to the code, answer what is returned.</li>
+</ul>
+
+</body></html>
