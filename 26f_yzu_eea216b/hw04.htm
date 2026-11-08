@@ -22,8 +22,8 @@
 <p class="lang-ch">學校正在舉辦⼀場⼤型活動，共有 n 位學⽣參加，學⽣編號為 1 到 n。活動開始時，所有學⽣按照編號由⼩到⼤排成⼀列，即 1, 2, 3, ..., n；而活動進⾏期間，老師會不斷調整學⽣的排列順序，調整的方式有以下兩種：</p>
 <p class="lang-en">The school is holding a large event with n students, numbered 1 to n. At the start, all students line up in order of their numbers from smallest to largest, i.e. 1, 2, 3, ..., n. During the event, the teacher keeps rearranging the students in one of the following two ways:</p>
 <ul>
-	<li class="lang-ch">move x y：將編號為 x 的同學，移動到編號為 y 的同學的後面。若 x 和 y 當中有任一人不在隊伍中，則忽略此動作。</li>
-	<li class="lang-en">move x y: Move student x to right behind student y. If either x or y is not in the line, ignore this operation.</li>
+	<li class="lang-ch">move x y：將編號為 x 的同學，移動到編號為 y 的同學的後面。若 x 和 y 當中有任一人不在隊伍中，則忽略此動作；若 x 與 y 相等，亦忽略此動作。</li>
+	<li class="lang-en">move x y: Move student x to right behind student y. If either x or y is not in the line, ignore this operation; if x equals y, also ignore this operation.</li>
 	<li class="lang-ch">remove x：將編號為 x 的同學移出隊伍。若 x 不在隊伍中，則忽略此動作。</li>
 	<li class="lang-en">remove x: Remove student x from the line. If x is not in the line, ignore this operation.</li>
 </ul>
@@ -57,7 +57,7 @@
 <p style="background-color:#f99;font-size:17pt">Sample Input</p>
 <p>n = 10, ops = [('move', 3, 5), ('remove', 4), ('move', 2, 10), ('remove', 1)]</p>
 
-<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+<p style="background-color:#f99;font-size:17pt">Sample Output (Traversed Results)</p>
 <p>5, 3, 6, 7, 8, 9, 10, 2</p>
 
 <p style="background-color:#f99;font-size:17pt">Hints and Notes</p>
