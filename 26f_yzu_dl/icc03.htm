@@ -1,0 +1,101 @@
+﻿<html>
+<head>
+	<title>EEA680A--Deep Learning</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<script type="text/javascript" src="myJs.js"></script>
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">In-class Competition III</p>
+
+<p style="background-color:#f99;font-size:17pt">Problem Desc</p>
+
+<p>Decode the Captcha.</p>
+
+<p class="lang-ch">驗證碼規格為四位數字，大小為高度 28 像素，寬度 112 像素，只有一個通道；由完整的 MNIST 資料集當中取樣，進行裁剪、旋轉與拼接，以及加上一些模糊和干擾而成。各位可以自行產生合乎前述的圖片來訓練模型參加比賽，課程方面也會在 Portal 討論區上，提供圖片產生的範例程式。</p>
+
+<p class="lang-en">The captcha is a four-digit number. The image is 28 pixels high and 112 pixels wide, with one channel. It is made by sampling from the full MNIST dataset, then cropping, rotating, and joining the digits, and adding some blur and noise. You can generate images that meet this description yourself to train your model for the competition. The course will also provide example code for generating the images on the Portal discussion board.</p>
+
+<p class="lang-ch">模型的規格限制如下：</p>
+<p class="lang-en">The model specifications are as follows:</p>
+<ul>
+	<li class="lang-ch">輸入形狀為 (batch, ch=1, h=28, w=112)，資料型別為 float32，數值範圍為 [0, 255]，即 MNIST 資料集原圖的範圍。請留意，課程提供的產圖程式，輸出沒有通道軸，你需要自己在餵給模型之前加入該軸。</li>
+	<li class="lang-en">The input shape is (batch, ch=1, h=28, w=112), the data type is float32, and the value range is [0, 255], which is the range of the original MNIST images. Please note that the output of the image generation code provided by the course has no channel axis, so you need to add that axis yourself before feeding it to the model.</li>
+
+	<li class="lang-ch">輸出形狀為 (batch, n_digits=4, n_class=10)，其中 n_digits 依序代表由左至右的四位數字。課程方面會以 np.argmax(output, axis=-1) 的方式，將模型的原始輸出，轉為驗證碼的辨識結果。</li>
+	<li class="lang-en">The output shape is (batch, n_digits=4, n_class=10), where n_digits stands for the four digits from left to right, in order. The course will convert the raw output of your model into the captcha recognition result with np.argmax(output, axis=-1).</li>
+
+	<li class="lang-ch">參數量在 5M 以內，每張圖推論時的運算量在 200M FLOPs 以內。如果你的模型在教師或助教的電腦上被主觀認為跑太久，則首先會依此條規格被檢視。課程方面將提供參數量和運算量的計算程式供參考。</li>
+	<li class="lang-en">The number of parameters must be within 5M, and the computation for each image during inference must be within 200M FLOPs. If the instructor or a TA subjectively thinks your model runs too long on their computer, it will first be checked against this specification. The course will provide code for calculating the number of parameters and the computation, for your reference.</li>
+
+	<li class="lang-ch">不得限定執行的 device；繳送的 model.pth 在儲存前，須先將模型參數搬至 cpu。</li>
+	<li class="lang-en">You may not restrict which device the model runs on. Before saving the submitted model.pth, you must move the model parameters to the cpu.</li>
+
+	<li class="lang-ch">不得使用 PyTorch 版本超過 2.11.0 才有的任何模組或函式，且不得使用 torch.compile、torch.export、torch.jit、torch.hub。</li>
+	<li class="lang-en">You may not use any module or function that only exists in PyTorch versions newer than 2.11.0, and you may not use torch.compile, torch.export, torch.jit, or torch.hub.</li>
+
+	<li class="lang-ch">Class 名稱必須為 MODEL，建構時不得帶入任何參數。</li>
+	<li class="lang-en">The class name must be MODEL, and it must not take any arguments when constructed.</li>
+
+	<li class="lang-ch">整體的評分程式會在 Portal 上提供，你的模型必須能被該程式載入並使用。</li>
+	<li class="lang-en">The overall grading code will be provided on the Portal, and your model must be loadable and usable by that code.</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">Detailed Rules</p>
+<ul>
+	<li>
+		<span class="lang-ch">繳送與展示規則：</span>
+		<span class="lang-en">Submission and demonstration rules:</span>
+		<ul>
+			<li>
+				<span class="lang-ch">12/16 14:00 前，繳送下列項目至 portal：</span>
+				<span class="lang-en">By 14:00 on 12/16, submit the following items to the portal:</span>
+				<ul>
+					<li class="lang-ch">模型架構：model.py，僅包含模型的 class，以及符合本頁其他規則的常數、函式或類別。</li>
+					<li class="lang-en">Model architecture: model.py, containing only the model class, plus constants, functions, or classes that follow the other rules on this page.</li>
+
+					<li class="lang-ch">模型參數：model.pth，訓練完成後由 torch.save(your_model_var_name.cpu().state_dict(), 'model.pth') 存下的模型。</li>
+					<li class="lang-en">Model parameters: model.pth, the model saved by torch.save(your_model_var_name.cpu().state_dict(), 'model.pth') after training.</li>
+
+					<li class="lang-ch">報告：檔名為 report.txt，以英文或正體中文撰寫，其中至少應描述你繳交版本的訓練方式。</li>
+					<li class="lang-en">Report: filename report.txt, written in English or Traditional Chinese, which should at least describe how the version you submitted was trained.</li>
+
+					<li class="lang-ch">其他腳本：model.py 以外的 *.py 檔案，名稱不限，將作為報告的佐證用。</li>
+					<li class="lang-en">Other scripts: *.py files other than model.py, with any names, which will be used as supporting evidence for the report.</li>
+				</ul>
+			</li>
+			<li class="lang-ch">12/18 原上課時間開始後，主動到教師座位旁排隊等候展示。</li>
+			<li class="lang-en">After the original class time begins on 12/18, proactively line up next to the instructor's seat to wait for your demonstration.</li>
+		</ul>
+	</li>
+	<li>
+		<span class="lang-ch">方法與函式庫限制：</span>
+		<span class="lang-en">Restrictions on methods and libraries:</span>
+		<ul>
+			<li class="lang-ch">模型架構 model.py：能 import 的函式庫或檔案只能有 torch，並禁止讀寫檔案、螢幕輸出、等待輸入、系統操作等行為。</li>
+			<li class="lang-ch">其他腳本 *.py 檔案：無限制。</li>
+		</ul>
+	</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">Grading Policy</p>
+
+<ul>
+	<li>
+		<span class="lang-ch">60% 依據全班之準確度排名給分，40% 依據報告與其他任何要求給分。準確度之計算細節如下：</span>
+		<span class="lang-en">60% is based on the ranking of accuracy among the whole class, and 40% is based on the report and any other requirements. The details of the accuracy calculation are as follows:</span>
+		<ul>
+			<li class="lang-ch">以評分程式的 Digit accuracy 和 String accuracy 兩者平均來採計。</li>
+			<li class="lang-en">The average of Digit accuracy and String accuracy from the grading code is used.</li>
+
+			<li class="lang-ch">產圖程式的 default 組態產生之圖片張數，佔所有評分資料的一半；其餘不同等級之干擾與張數不予保證。</li>
+			<li class="lang-en">The number of images generated with the default configuration of the image generation code makes up half of all the grading data. The other levels of noise and numbers of images are not guaranteed.</li>
+		</ul>
+	</li>
+	<li class="lang-ch">遲交但能準時參加 demo 者，分數八折給予；有繳交但未參加展示者，分數六折給予。遲交且未能準時參加 demo 者不給分</li>
+	<li class="lang-en">If you submit late but attend the demo on time, your score will be multiplied by 0.8; if you submit but do not attend the demonstration, your score will be multiplied by 0.6. If you submit late and fail to attend the demo on time, you will receive no score.</li>
+</ul>
+
+</body></html>
