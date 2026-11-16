@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+	<title>EEA216B--Data Structure</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet type="text/css" href="myCss.css">
+	<script type="text/javascript" src="myJs.js"></script>
+	<base target="_blank">
+</head>
+<body bgcolor="#ccccff">
+
+<p style="background-color:#9f9;text-align:center;font-size:17pt">HW05: Trees on the Level</p>
+
+<p style="background-color:#f99;font-size:17pt">Basic Info</p>
+<ul>
+	<li>Deadline: 11/30 (Mon.) 13:00</li>
+	<li>How to submit: Upload to portal. File name must be "hw05_your_student_ID.py". Example: hw05_9962816.py</li>
+	<li>Demo time/place: 12/01 (Tue.), same class time, same room</li>
+	<li>Grading: Correctness * Demo / 100</li>
+</ul>
+
+<p style="background-color:#f99;font-size:17pt">Problem Desc</p>
+<p class="lang-ch">本題會用一種特殊的方法來描述二元樹的結構，並要求你判斷描述是否完整，以及視情況回答其層序走訪。</p>
+<p class="lang-en">This problem uses a special way to describe the structure of a binary tree. You need to determine whether the description is complete and, if it is, give the level-order traversal.</p>
+
+<p class="lang-ch">樹的每個節點會用 (n, s) 的 tuple 表示，其中 n 是節點的值，並且會是正整數；s 是從 root 到節點的路徑，其中「L」代表往左子樹走，「R」代表往右子樹走。根節點的 s 為空字串。節點給定時，不保證任何順序。</p>
+<p class="lang-en">Each node of the tree is represented as a tuple (n, s), where n is the value of the node and is a positive integer, and s is the path from the root to the node, where "L" means going to the left subtree and "R" means going to the right subtree. The s of the root is an empty string. The nodes are given in no guaranteed order.</p>
+
+<p class="lang-ch">舉例來說，若給定 [(6, 'RR'), (4, 'LL'), (3, 'R'), (5, 'LR'), (7, 'LRL'), (2, 'L'), (1, ''), (8, 'LRR')]，則可以描述出如下的樹；而若有任何一個非葉節點沒被描述到，則代表描述不完整。</p>
+<p class="lang-en">For example, given [(6, 'RR'), (4, 'LL'), (3, 'R'), (5, 'LR'), (7, 'LRL'), (2, 'L'), (1, ''), (8, 'LRR')], the following tree can be described. If any non-leaf node is not described, the description is incomplete.</p>
+<center><img src="pics/hw05_example.svg"></center>
+
+<p class="lang-ch">請撰寫一個函式 trees_on_level，輸入是前面提及的描述，輸出是樹的層序走訪（描述完整時）或空的 list（描述不完整時）。</p>
+<p class="lang-en">Please write a function trees_on_level. The input is the description above. The output is the level-order traversal of the tree (when the description is complete) or an empty list (when the description is incomplete).</p>
+
+<p style="background-color:#f99;font-size:17pt">Input Desc</p>
+<p class="lang-ch">如上所述的描述內容，以 list of tuples 的方式給定。其中，給定的節點至少會有一個。</p>
+<p class="lang-en">The description as stated above, given as a list of tuples. At least one node is given.</p>
+
+<p style="background-color:#f99;font-size:17pt">Output Desc</p>
+<p class="lang-ch">描述完整時，將層序走訪的結果以 list of integers 的格式回傳；描述不完整時，回傳空的 list。</p>
+<p class="lang-en">When the description is complete, return the level-order traversal as a list of integers. When the description is incomplete, return an empty list.</p>
+
+<p style="background-color:#f99;font-size:17pt">Sample Input</p>
+<p>[(6, 'RR'), (4, 'LL'), (3, 'R'), (5, 'LR'), (7, 'LRL'), (2, 'L'), (1, ''), (8, 'LRR')]</p>
+
+<p style="background-color:#f99;font-size:17pt">Sample Output</p>
+<p>[1, 2, 3, 4, 5, 6, 7, 8]</p>
+
+<p style="background-color:#f99;font-size:17pt">Hints and Notes</p>
+
+<ul>
+	<li class="lang-ch">測資包含多筆，每無法解出一筆扣 20 分，扣至本作業 0 分為止。</li>
+	<li class="lang-en">There are multiple test cases. 20 points will be deducted for each unsolved test case, down to a minimum of 0 points for this assignment.</li>
+	<li>In the code you submit,
+		<ul>
+			<li class="lang-ch">必須包含「def trees_on_level」及其之內的任何內容，並能透過呼叫該 function 來解題。</li>
+			<li class="lang-en">It must include "def trees_on_level" and everything inside it, and the problem must be solvable by calling that function.</li>
+			<li class="lang-ch">能靠在最左方不縮排的內容，只有「def trees_on_level」、「if __name__ == '__main__':」，以及你自己撰寫的類別或函式。</li>
+			<li class="lang-en">The only things allowed at the top level (no indent) are "def trees_on_level", "if __name__ == '__main__':", and your own custom class(es) or function(s).</li>
+			<li class="lang-ch">除了在「if __name__ == '__main__':」之中以外，不要有任何等待使用者輸入、螢幕輸出、讀寫檔案等行為。</li>
+			<li class="lang-en">Do not perform any user input, screen output, or file read/write operations outside of "if __name__ == '__main__':".</li>
+		</ul>
+	</li>
+	<li class="lang-ch">Demo 範例問題：給定一組測資，回答某些變數在程式某些地方的全部或部分內容。</li>
+	<li class="lang-en">Demo example question: Given one test case, show all or part of the content of some variable at some point in the code.</li>
+</ul>
+
+</body></html>
