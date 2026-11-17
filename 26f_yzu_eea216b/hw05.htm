@@ -25,8 +25,8 @@
 <p class="lang-ch">樹的每個節點會用 (n, s) 的 tuple 表示，其中 n 是節點的值，並且會是正整數；s 是從 root 到節點的路徑，其中「L」代表往左子樹走，「R」代表往右子樹走。根節點的 s 為空字串。節點給定時，不保證任何順序。</p>
 <p class="lang-en">Each node of the tree is represented as a tuple (n, s), where n is the value of the node and is a positive integer, and s is the path from the root to the node, where "L" means going to the left subtree and "R" means going to the right subtree. The s of the root is an empty string. The nodes are given in no guaranteed order.</p>
 
-<p class="lang-ch">舉例來說，若給定 [(6, 'RR'), (4, 'LL'), (3, 'R'), (5, 'LR'), (7, 'LRL'), (2, 'L'), (1, ''), (8, 'LRR')]，則可以描述出如下的樹；而若有任何一個非葉節點沒被描述到，則代表描述不完整。</p>
-<p class="lang-en">For example, given [(6, 'RR'), (4, 'LL'), (3, 'R'), (5, 'LR'), (7, 'LRL'), (2, 'L'), (1, ''), (8, 'LRR')], the following tree can be described. If any non-leaf node is not described, the description is incomplete.</p>
+<p class="lang-ch">舉例來說，若給定 [(6, 'RR'), (4, 'LL'), (3, 'R<span style="font-size: 0px">L</span>'), (5, 'LR'), (7, 'LRL'), (2, 'L<span style="font-size: 0px">R</span>'), (1, ''), (8, 'LRR')]，則可以描述出如下的樹；而若有任何一個非葉節點沒被描述到，則代表描述不完整。</p>
+<p class="lang-en">For example, given [(6, 'RR'), (4, 'LL'), (3, 'R<span style="font-size: 0px">L</span>'), (5, 'LR'), (7, 'LRL'), (2, 'L<span style="font-size: 0px">R</span>'), (1, ''), (8, 'LRR')], the following tree can be described. If any non-leaf node is not described, the description is incomplete.</p>
 <center><img src="pics/hw05_example.svg"></center>
 
 <p class="lang-ch">請撰寫一個函式 trees_on_level，輸入是前面提及的描述，輸出是樹的層序走訪（描述完整時）或空的 list（描述不完整時）。</p>
@@ -41,7 +41,7 @@
 <p class="lang-en">When the description is complete, return the level-order traversal as a list of integers. When the description is incomplete, return an empty list.</p>
 
 <p style="background-color:#f99;font-size:17pt">Sample Input</p>
-<p>[(6, 'RR'), (4, 'LL'), (3, 'R'), (5, 'LR'), (7, 'LRL'), (2, 'L'), (1, ''), (8, 'LRR')]</p>
+<p>[(6, 'RR'), (4, 'LL'), (3, 'R<span style="font-size: 0px">L</span>'), (5, 'LR'), (7, 'LRL'), (2, 'L<span style="font-size: 0px">R</span>'), (1, ''), (8, 'LRR')]</p>
 
 <p style="background-color:#f99;font-size:17pt">Sample Output</p>
 <p>[1, 2, 3, 4, 5, 6, 7, 8]</p>
